@@ -2,10 +2,19 @@
 
 // The color palette
 $palette: (
+	bright:(
+		1:	#ADBCFF,
+		2:	#DEE1FF,
+		3:	#EDEFF8,
+		4:	#F9ECF1,
+		5:	#1267D6,
+		6:	#4C82FB,
+		7:	#869EFF,
+	),
 	light: (
-		1: #ECEDED,
-		2: #9CA9B3,
-		3: #717D86
+		1:	#040E34,
+		2:	#0B193F,
+		3:	#09265E
 	),
 	dark: (
 		1: #151719,
@@ -13,16 +22,16 @@ $palette: (
 		3: #33363A
 	),
 	primary: (
-		1: #6163FF,
-		2: #ACADFF,
-		3: #5658DD,
-		4: #E9E9FF
+	1:	#C41969,
+	2:	#8C0F49,
+	3:	#55072A,
+	4:	#350318,
  	),
 	secondary: (
-		1: #24E5AF,
-		2: #73EFCC,
-		3: #1CB68B,
-		4: #D2F9EE
+	1:	#F9ECF1,
+	2:	#FFD9E4,
+	3:	#8C0F49,
+	4:	#FF6FA3,
 	),
 	alert: (
 		error: #FF6171,
@@ -39,7 +48,12 @@ $color: (
 	mid-contrast: 			get-color(light, 2),
 	low-contrast: 			get-color(light, 3),
 	primary:				get-color(primary, 3),
+	bright-primary:			get-color(bright, 1),
+	bright-secondary:		get-color(bright, 2),
+	bright-avg:				get-color(bright, 4),
 	secondary:				get-color(secondary, 1),
+	secondary-intense:		get-color(secondary, 3),
+	bright-intense:			get-color(primary, 1),
 	error:					get-color(alert, error),
 	warning:				get-color(alert, warning),
 	success:				get-color(alert, success),
@@ -77,20 +91,13 @@ $icon--color: (
 $bg--color: (
 	body: radial-gradient(
 				circle at 10% 10%,
-				#040E34,
-				#0B193F,
-				#09265E,
-				#1D4294,
-				#1267D6,
-				#4C82FB,
-				#869EFF,
-				// #ADBCFF,
-				// #DEE1FF,
-				// #EDEFF8,
-				// #F9ECF1,
-				// #FFD9E4,
-				// #FBA4C0,
-				// #FF6FA3,
+				#ADBCFF,
+				#DEE1FF,
+				#EDEFF8,
+				#F9ECF1,
+				#FFD9E4,
+				#FBA4C0,
+				#FF6FA3,
 				#cc54ad,
 				#C41969,
 				#8C0F49,

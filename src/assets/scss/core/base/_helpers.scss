@@ -10,6 +10,14 @@
 	border: 0;
 }
 
+.text-color-bright-avg-hover {
+	color: color(bright-avg);
+	-moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
 // Reset lists style
 .list-reset {
 	list-style: none;
@@ -52,7 +60,19 @@
 
 // Text color
 .text-color-high {
-	color: color(high-contrast);
+	color: color(bright-primary);
+}
+
+.text-color-avg {
+	color: color(bright-secondary);
+}
+
+.text-color-bright-avg {
+	color: color(bright-avg);
+}
+
+.text-color-bright {
+	color: color(bright-secondary);
 }
 
 .text-color-mid {
@@ -501,6 +521,9 @@ img.has-shadow {
 .spacer-64 {
 	padding-top: 64px;
 }
+
+
+
 
 @include media( '<=medium' ) {
 

@@ -21,6 +21,17 @@ const defaultProps = {
   bottomDivider: false
 }
 
+function pickHex(color1, color2, weight) {
+  var w1 = weight;
+  var w2 = 1 - w1;
+  var rgb = [Math.round(color1[0] * w1 + color2[0] * w2),
+  Math.round(color1[1] * w1 + color2[1] * w2),
+  Math.round(color1[2] * w1 + color2[2] * w2)];
+  return rgb;
+}
+
+const basePalette = ['#ff5eb9', '#4c2dfa']
+
 const Header = ({
   className,
   navPosition,
@@ -45,7 +56,7 @@ const Header = ({
       document.removeEventListener('click', clickOutside);
       closeMenu();
     };
-  });  
+  });
 
   const openMenu = () => {
     document.body.classList.add('off-nav-is-active');
@@ -67,7 +78,7 @@ const Header = ({
     if (!nav.current) return
     if (!isActive || nav.current.contains(e.target) || e.target === hamburger.current) return;
     closeMenu();
-  }  
+  }
 
   const classes = classNames(
     'site-header',
@@ -75,18 +86,44 @@ const Header = ({
     className
   );
 
+
+
+  const [colors, setColors] = useState(['#ff5eb9', '#4c2dfa'])
+  const [color, setColor] = useState('linear-gradient(to right, rgba(4, 14, 52, 0.7) 1%, rgba(29, 66, 148, 0.7), rgba(140, 15, 73, 0.7), rgba(43, 0, 11, 0.7))')
+  var body = document.body,
+    html = document.documentElement;
+
+  var height = Math.max(body.scrollHeight, body.offsetHeight,
+    html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", () => {
+        // if (window.pageYOffset > 200)
+        //   setColors(['red', 'white'])
+
+        setColors([pickHex(basePalette[0], basePalette[1], window.pageYOffset / height), 'white'])
+        setColor(`linear-gradient(to right, rgba(4, 14, 52, 0.7) 1%, rgba(29, 66, 148, 0.7), rgba(140, 15, 73, 0.7), rgba(43, 0, 11, 0.7) ${Math.max(100 -Math.round(window.pageYOffset * 100 / height / 10),0)}%)`)
+        console.log("PP",Math.round(window.pageYOffset * 100/ height / 5))
+      }
+      );
+    }
+  }, []);
+  console.log("COLS", colors, height)
   return (
     <header
       {...props}
       className={classes}
+    style={{ background: color}}
     >
-      <div className="container">
+      <div className="container" >
         <div className={
           classNames(
             'site-header-inner',
             bottomDivider && 'has-bottom-divider'
           )}>
-          <BoxScene />
+          <BoxScene  //materialColor={colors[0]} backgroundColor={colors[1]}
+           />
           {!hideNav &&
             <>
               <button
@@ -113,7 +150,7 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
-                      <Link to="#0" onClick={closeMenu}>Documentation</Link>
+                      <Link to="#0" onClick={closeMenu}><div className='text-color-bright-avg-hover'>Whitepaper</div></Link>
                     </li>
                   </ul>
                   {!hideSignin &&
@@ -121,7 +158,7 @@ const Header = ({
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Sign up</Link>
+                        <Link to="https://www.1delta.io/" className="button button-bright button-wide-mobile button-sm" onClick={closeMenu}>Go to App</Link>
                       </li>
                     </ul>}
                 </div>

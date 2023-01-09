@@ -58,3 +58,40 @@ Button.propTypes = propTypes;
 Button.defaultProps = defaultProps;
 
 export default Button;
+
+
+const ButtonDark = ({
+  className,
+  tag,
+  size,
+  loading,
+  wide,
+  wideMobile,
+  disabled,
+  ...props
+}) => {
+
+  const classes = classNames(
+    'button',
+    `button-bright`,
+    size && `button-${size}`,
+    loading && 'is-loading',
+    wide && 'button-block',
+    wideMobile && 'button-wide-mobile',
+    className
+  );
+
+  const Component = tag;
+  return (
+    <Component
+      {...props}
+      className={classes}
+      disabled={disabled}
+    />
+  );
+}
+
+Button.propTypes = propTypes;
+Button.defaultProps = defaultProps;
+
+export { ButtonDark };

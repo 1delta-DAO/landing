@@ -10,6 +10,7 @@ $button--color: (
 	button-light: 		get-color(dark, 2),
 	button-dark: 		get-color(light, 1),
 	button-primary: 	get-color(light, 1),
+	button-bright: 	    get-color(bright, 3),
 	button-secondary:	get-color(light, 1),
 	button-disabled: 	get-color(dark, 3)
 );
@@ -20,12 +21,33 @@ $button--bg: (
 	button-light-hover: 	darken(get-color(light, 1), 5%),
 	button-dark: 			get-color(dark, 2),
 	button-dark-hover: 		lighten(get-color(dark, 2), 2%),
-	button-primary: 		get-color(primary, 1),
+	button-primary: 		#1D4294,
 	button-primary-hover: 	lighten(get-color(primary, 1), 2%),
 	button-secondary: 		get-color(secondary, 1),
 	button-secondary-hover:	lighten(get-color(secondary, 1), 2%),
 	button-disabled: 		get-color(light, 3)
 );
+
+// #040E34,
+// #0B193F,
+// #09265E,
+// #1D4294,
+// #1267D6,
+// #4C82FB,
+// #869EFF,
+// // #ADBCFF,
+// // #DEE1FF,
+// // #EDEFF8,
+// // #F9ECF1,
+// // #FFD9E4,
+// // #FBA4C0,
+// // #FF6FA3,
+// #cc54ad,
+// #C41969,
+// #8C0F49,
+// #55072A,
+// #350318,
+// #2B000B
 
 // Buttons: border color
 $button--border: (

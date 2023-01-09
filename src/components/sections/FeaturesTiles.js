@@ -44,7 +44,7 @@ const FeaturesTiles = ({
   );
 
   const sectionHeader = {
-    title: 'All lending pool interactions connected thrugh trades in a single app!',
+    title: 'All lending pool interactions connected through trades in a single app!',
     paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
   };
 
@@ -71,11 +71,11 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
+                    Instant Leverage
+                  </h4>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                    We allow you to use flash swaps to direcly borrow and supply on margin.
+                  </p>
                 </div>
               </div>
             </div>
@@ -93,11 +93,11 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
+                    Prevent Liquidations
+                  </h4>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                    You can self-liquidate in a single click if necesseray - no fees or manual withdrawals!
+                  </p>
                 </div>
               </div>
             </div>
@@ -115,11 +115,11 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
+                    Trade with the best
+                  </h4>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                   We connect the best exchanges with the most liquid lenders.
+                  </p>
                 </div>
               </div>
             </div>
@@ -137,11 +137,11 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
+                    No more centralization
+                  </h4>
                   <p className="m-0 text-sm">
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                  </p>
                 </div>
               </div>
             </div>
@@ -159,11 +159,11 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
+                    Easy to use
+                  </h4>
                   <p className="m-0 text-sm">
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                  </p>
                 </div>
               </div>
             </div>
@@ -181,11 +181,11 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
+                    Tons of features
+                  </h4>
                   <p className="m-0 text-sm">
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                  </p>
                 </div>
               </div>
             </div>

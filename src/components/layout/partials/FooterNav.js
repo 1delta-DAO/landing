@@ -17,18 +17,18 @@ const FooterNav = ({
       {...props}
       className={classes}
     >
-      <ul className="list-reset">
+      <ul className="list-reset" >
         <li>
-          <Link to="#0">Contact</Link>
+          <Link to="#0" style={{color:'#C41969'}}>Contact</Link>
         </li>
         <li>
-          <Link to="#0">About us</Link>
+          <Link to="#0" style={{color:'#C41969'}}>About us</Link>
         </li>
         <li>
-          <Link to="#0">FAQ's</Link>
+          <Link to="#0" style={{color:'#C41969'}}>FAQ's</Link>
         </li>
         <li>
-          <Link to="#0">Support</Link>
+          <Link to="#0" style={{color:'#C41969'}}>Support</Link>
         </li>
       </ul>
     </nav>

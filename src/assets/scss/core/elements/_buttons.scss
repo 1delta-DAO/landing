@@ -108,6 +108,24 @@
 	}
 }
 
+.button-bright {
+	color: color(button-bright);
+    background-color: color-bg(button-primary);
+	border-color: color-border(button-primary);
+
+    &:hover {
+        background-color: color-bg(button-primary-hover);
+		border-color: color-border(button-primary-hover);
+    }
+
+	&.is-loading {
+
+		&::after {
+			border-color: color(button-primary);
+		}
+	}
+}
+
 .button-secondary {
 	color: color(button-secondary);
     background-color: color-bg(button-secondary);

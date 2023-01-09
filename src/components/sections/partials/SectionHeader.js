@@ -43,7 +43,7 @@ const SectionHeader = ({
             {data.title &&
               <Component className={
                 classNames(
-                  'mt-0',
+                  'mt-0 ',
                   data.paragraph ? 'mb-16' : 'mb-0'
                 )}>{data.title}</Component>
             }
@@ -61,3 +61,51 @@ SectionHeader.propTypes = propTypes;
 SectionHeader.defaultProps = defaultProps;
 
 export default SectionHeader;
+
+
+
+const SectionHeaderBright = ({
+  className,
+  data,
+  children,
+  tag,
+  ...props
+}) => {
+
+  const classes = classNames(
+    'section-header',
+    className
+  );
+
+  const Component = tag;
+
+  return (
+    <>
+      {(data.title || data.paragraph) &&
+        <div
+          {...props}
+          className={classes}
+        >
+          <div className="container-xs">
+            {children}
+            {data.title &&
+              <Component className={
+                classNames(
+                  'mt-0 text-color-bright-avg',
+                  data.paragraph ? 'mb-16' : 'mb-0'
+                )}>{data.title}</Component>
+            }
+            {data.paragraph &&
+              <p className="m-0">{data.paragraph}</p>
+            }
+          </div>
+        </div>
+      }
+    </>
+  );
+}
+
+SectionHeaderBright.propTypes = propTypes;
+SectionHeaderBright.defaultProps = defaultProps;
+
+export { SectionHeaderBright }

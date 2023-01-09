@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Logo from './partials/Logo';
+import Logo from './partials/DeltaLogo';
 import FooterNav from './partials/FooterNav';
 import FooterSocial from './partials/FooterSocial';
 
@@ -44,8 +44,11 @@ const Footer = ({
             <FooterSocial />
           </div>
           <div className="footer-bottom space-between text-xxs invert-order-desktop">
-            <FooterNav />
-            <div className="footer-copyright">Made by <a href="https://cruip.com">Cruip</a>. All right reserved</div>
+            <FooterNav className={'text-color-bright-avg-hover'} />
+            <div className="footer-copyright text-color-bright">
+              <a style={{color:'#C41969', fontWeight:'bold'}} href="https://1delta.io">1Delta DAO</a>
+              <br/>
+              All right reserved</div>
           </div>
         </div>
       </div>
