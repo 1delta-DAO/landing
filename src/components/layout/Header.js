@@ -142,7 +142,9 @@ const Header = ({
                   classNames(
                     'header-nav',
                     isActive && 'is-active'
-                  )}>
+                  )}
+                  style={{background:color}}
+                  >
                 <div className="header-nav-inner">
                   <ul className={
                     classNames(
