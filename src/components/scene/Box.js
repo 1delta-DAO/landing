@@ -16,7 +16,7 @@ function Box(props) {
         transmission: 0.1,
         // transparent: true, // wireframeLinewidth: 1, wireframe: true
     });
-    const geometry = new THREE.TetrahedronGeometry(1, 0);
+    const geometry = new THREE.TetrahedronGeometry(1, 0); // = new THREE.ConeGeometry(1, 1.3, 3);
     geometry.scale(1, 1, 1)
 
     useFrame((state, delta) => {

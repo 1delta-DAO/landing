@@ -26,6 +26,7 @@ $palette: (
 	2:	#8C0F49,
 	3:	#55072A,
 	4:	#350318,
+	5: 	#2B000B
  	),
 	secondary: (
 	1:	#F9ECF1,
@@ -63,7 +64,9 @@ $color: (
 	base-inverse:			get-color(light, 3),
 	high-contrast-inverse: 	get-color(dark, 1),
 	mid-contrast-inverse: 	get-color(dark, 2),
-	low-contrast-inverse: 	get-color(light, 3)
+	low-contrast-inverse: 	get-color(light, 3),
+	gradient-colors:  get-color(primary, 4),
+	bright-sep:  get-color(bright, 5),
 );
 
 // Borders and dividers: color
