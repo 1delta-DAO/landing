@@ -137,7 +137,7 @@ const SectionHeaderBrightAlt = ({
             {data.title &&
               <Component className={
                 classNames(
-                  'mt-0 text-color-bright-avg-hover',
+                  'mt-0 text-color-bright-avg',
                   data.paragraph ? 'mb-16' : 'mb-0'
                 )}>{data.title}</Component>
             }
