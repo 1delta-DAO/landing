@@ -91,7 +91,7 @@ const SectionHeaderBright = ({
             {data.title &&
               <Component className={
                 classNames(
-                  'mt-0 text-color-bright-avg',
+                  'mt-0 text-color-transition',
                   data.paragraph ? 'mb-16' : 'mb-0'
                 )}>{data.title}</Component>
             }

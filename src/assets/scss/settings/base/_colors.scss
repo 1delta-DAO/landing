@@ -19,7 +19,8 @@ $palette: (
 	dark: (
 		1: #151719,
 		2: #25282C,
-		3: #33363A
+		3: #33363A,
+		4: linear-gradient(to bottom, red, blue)
 	),
 	primary: (
 	1:	#C41969,
@@ -53,6 +54,7 @@ $color: (
 	bright-primary:			get-color(bright, 1),
 	bright-secondary:		get-color(bright, 2),
 	bright-avg:				get-color(bright, 4),
+	transition:				get-color(dark, 4),
 	secondary:				get-color(secondary, 1),
 	secondary-intense:		get-color(secondary, 3),
 	bright-intense:			get-color(primary, 1),
@@ -65,8 +67,8 @@ $color: (
 	high-contrast-inverse: 	get-color(dark, 1),
 	mid-contrast-inverse: 	get-color(dark, 2),
 	low-contrast-inverse: 	get-color(light, 3),
-	gradient-colors:  get-color(primary, 4),
-	bright-sep:  get-color(bright, 5),
+	cta-color:  			get-color(primary, 3),
+	bright-sep:  			get-color(bright, 5),
 );
 
 // Borders and dividers: color

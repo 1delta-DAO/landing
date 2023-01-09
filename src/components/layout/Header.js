@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
-import Logo from './partials/DeltaLogo';
+import { useLocation } from 'react-router-dom'
 import BoxScene from '../scene/Box';
 
 const propTypes = {
@@ -41,7 +41,8 @@ const Header = ({
   bottomDivider,
   ...props
 }) => {
-
+  const location = useLocation();
+  console.log(location.pathname);
   const [isActive, setIsactive] = useState(false);
 
   const nav = useRef(null);
@@ -99,22 +100,20 @@ const Header = ({
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", () => {
-        // if (window.pageYOffset > 200)
-        //   setColors(['red', 'white'])
-
         setColors([pickHex(basePalette[0], basePalette[1], window.pageYOffset / height), 'white'])
-        setColor(`linear-gradient(to right, rgba(4, 14, 52, 0.7) 1%, rgba(29, 66, 148, 0.7), rgba(140, 15, 73, 0.7), rgba(43, 0, 11, 0.7) ${Math.max(100 -Math.round(window.pageYOffset * 100 / height / 10),0)}%)`)
-        console.log("PP",Math.round(window.pageYOffset * 100/ height / 5))
+        setColor(`linear-gradient(to right, rgba(4, 14, 52, 0.7) 1%, rgba(29, 66, 148, 0.7), rgba(140, 15, 73, 0.7), rgba(43, 0, 11, 0.7) ${Math.max(100 - Math.round(window.pageYOffset * 100 / height / 10), 0)}%)`)
       }
       );
     }
   }, []);
-  console.log("COLS", colors, height)
+  const [isHome, isDisclaimer] = useMemo(() => {
+    return [!location.pathname.includes('disclaimer'), location.pathname.includes('disclaimer')]
+  }, [location])
   return (
     <header
       {...props}
       className={classes}
-    style={{ background: color}}
+      style={{ background: color }}
     >
       <div className="container" >
         <div className={
@@ -123,7 +122,7 @@ const Header = ({
             bottomDivider && 'has-bottom-divider'
           )}>
           <BoxScene  //materialColor={colors[0]} backgroundColor={colors[1]}
-           />
+          />
           {!hideNav &&
             <>
               <button
@@ -144,6 +143,24 @@ const Header = ({
                     isActive && 'is-active'
                   )}>
                 <div className="header-nav-inner">
+                  <ul className={
+                    classNames(
+                      'list-reset text-xs',
+                      navPosition && `header-nav-${navPosition}`
+                    )}>
+                    <li>
+                      <Link to="../" onClick={closeMenu}><div className={isHome ? 'text-color-bright-avg-hover-selected' : 'text-color-bright-avg-hover'}>Home</div></Link>
+                    </li>
+                  </ul>
+                  <ul className={
+                    classNames(
+                      'list-reset text-xs',
+                      navPosition && `header-nav-${navPosition}`
+                    )}>
+                    <li>
+                      <Link to="../disclaimer" onClick={closeMenu}><div className={isDisclaimer ? 'text-color-bright-avg-hover-selected' : 'text-color-bright-avg-hover'}>Disclaimer</div></Link>
+                    </li>
+                  </ul>
                   <ul className={
                     classNames(
                       'list-reset text-xs',

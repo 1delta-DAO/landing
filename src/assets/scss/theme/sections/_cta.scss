@@ -9,9 +9,10 @@
 .cta-inner {
 	padding-left: 16px;
 	padding-right: 16px;
-    background-color: color(gradient-colors);
+    background-color: color(cta-color);
 	background-image: url(../../../images/cta-illustration.svg);
 	background-repeat: no-repeat;
+    opacity: 0.9;
     background-size: cover;
     background-position: right bottom;    
 }

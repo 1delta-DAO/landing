@@ -55,7 +55,7 @@ const Testimonial = ({
     >
       <div className="container">
         <div className={innerClasses}>
-          <SectionHeaderBright data={sectionHeader} className="center-content text-color-avg" />
+          <SectionHeaderBright data={sectionHeader} className="center-content text-color-transition" />
           <div className={tilesClasses}>
 
             <div className="tiles-item reveal-from-right" data-reveal-delay="200">

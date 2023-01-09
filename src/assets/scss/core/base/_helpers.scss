@@ -18,6 +18,15 @@
     transition: all .2s ease-in;
 }
 
+.text-color-bright-avg-hover-selected {
+	color: color(bright-avg);
+	font-size: 20px;
+	-moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
 // Reset lists style
 .list-reset {
 	list-style: none;
@@ -70,6 +79,28 @@
 .text-color-avg {
 	color: color(bright-secondary);
 }
+
+.text-color-transition {
+	text-shadow: 0.5px 0.5px 1px rgba(255, 108, 184, 0.409), 0 0 0.1em rgba(255, 108, 184, 0.409), 0 0 0.1em rgba(255, 108, 184, 0.575);
+	// background: -webkit-linear-gradient(rgb(20, 0, 57), rgb(43, 43, 43), rgb(116, 116, 116));
+	// -webkit-background-clip: text;
+	// -webkit-text-fill-color: transparent;
+	color: color(transition);
+}
+
+.text-color-transition-avg {
+	color: color(bright-avg);
+	-moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+	text-shadow: 0.5px 0.5px 1px rgba(255, 108, 184, 0.409), 0 0 0.1em rgba(255, 108, 184, 0.409), 0 0 0.1em rgba(255, 108, 184, 0.575);
+	// background: -webkit-linear-gradient(rgb(20, 0, 57), rgb(43, 43, 43), rgb(116, 116, 116));
+	// -webkit-background-clip: text;
+	// -webkit-text-fill-color: transparent;
+	color: color(transition);
+}
+
 
 .text-color-bright-avg {
 	color: color(bright-avg);
