@@ -68,6 +68,10 @@
 }
 
 .button-sm {
+	-moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
     padding: (($button-form-sm--height - get-line-height(button) - ($button-form--border-width * 2)) * 0.5) ($button-sm--padding-h - $button-form--border-width);
 	height: $button-form-sm--height;
 }
@@ -109,6 +113,7 @@
 }
 
 .button-bright {
+	border-radius: 24px;
 	color: color(button-bright);
     background-color: color-bg(button-primary);
 	border-color: color-border(button-primary);

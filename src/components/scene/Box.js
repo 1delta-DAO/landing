@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Canvas, useFrame } from 'react-three-fiber';
 import * as THREE from "three";
-
+import background from './../../assets/images/tetrahedron-bg.svg';
 
 function Box(props) {
 
@@ -42,13 +42,11 @@ function Box(props) {
 export default function BoxScene() {
 
     return (
-        <div style={{ borderRadius: '100px', background: 'rgba(78, 0, 40, 0.5)', width: '70px', height: '70px' }} >
-            <Canvas dpr={window.devicePixelRatio} style={{ padding: '0px', margin: '0px', width: '70px', height: '70px' }} >
+        <div style={{ borderRadius: '100px', backgroundImage: `url(${background})`, width: '70px', height: '70px',backgroundSize: 'contain' }} >
+            <Canvas dpr={window.devicePixelRatio} style={{ padding: '0px', margin: '0px', width: '70px', height: '70px' }} background={`url(${background})`}>
                 <perspectiveCamera position={[0, 0, 0.1]} fov={100} aspect={30}>
                     <ambientLight posi />
-                    {/* <color attach="background" args={['#f5efe6']} /> */}
-                    {/* <color attach="border-radius" args={[60]} /> */}
-                    <pointLight position={[0, 5, 10]} intensity={6} color={'rgba(255, 0, 74, 0.95)'} />
+                    <pointLight position={[2, -2, 10]} intensity={6} color={'white'} />
                     <Box position={[0, 0, 0]} color='red' />
                 </perspectiveCamera>
             </Canvas>

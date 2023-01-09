@@ -50,8 +50,8 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: 'Test',
-    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
+    title: 'We aim for the best UX',
+    paragraph: 'All relevant leding protocol parameters and DEX trade data is direcly available.'
   };
 
   return (
@@ -67,14 +67,14 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-transition fw-600 tt-u mb-8">
-                  Lightning fast workflow
-                  </div>
+                  Lightning fast tradeflow
+                </div>
                 <h3 className="mt-0 mb-12 text-color-transition">
                   Manage your risk
-                  </h3>
+                </h3>
                 <p className="m-0 text-color-transition">
-                  Our app gives a full overview of all required risk parameters.
-                  </p>
+                  Our app gives a full overview of all required risk parameters. You immediately see if you are close to liquidation - and can directly take action to prevent that from happening.
+                </p>
               </div>
               <div className={
                 classNames(
@@ -83,7 +83,7 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/features-split-image-01.png')}
+                  src={require('./../../assets/images/trim-panel.png')}
                   alt="Features split 01"
                   width={528}
                   height={396} />
@@ -93,14 +93,14 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-right" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-transition fw-600 tt-u mb-8">
-                  Lightning fast workflow
-                  </div>
+                  Take exposure safely
+                </div>
                 <h3 className="mt-0 mb-12 text-color-transition">
-                  Data-driven insights
-                  </h3>
+                  Squeeze out the highest possible leverage
+                </h3>
                 <p className="m-0 text-color-transition">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
+                  You can direcy see which exposure is ideal for your current positions. With being able to self-liquidate, you can use higer leverages than it would be possible otherwise. 
+                </p>
               </div>
               <div className={
                 classNames(
@@ -109,7 +109,7 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/features-split-image-02.png')}
+                  src={require('./../../assets/images/top-panel.png')}
                   alt="Features split 02"
                   width={528}
                   height={396} />
@@ -119,14 +119,14 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-transition fw-600 tt-u mb-8">
-                  Lightning fast workflow
-                  </div>
+                  The best from both worlds
+                </div>
                 <h3 className="mt-0 mb-12 text-color-transition">
-                  Data-driven insights
-                  </h3>
+                  A perfect mix of components
+                </h3>
                 <p className="m-0 text-color-transition">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
+                  We unite the best of both worlds. Flash swaps allow you to execute collateral and debt swaps in a single click. You can also easily see whether a trade is beneficial or bad for your account health.
+                </p>
               </div>
               <div className={
                 classNames(
@@ -135,7 +135,7 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/features-split-image-03.png')}
+                  src={require('./../../assets/images/full-panel.png')}
                   alt="Features split 03"
                   width={528}
                   height={396} />

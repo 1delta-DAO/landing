@@ -45,7 +45,7 @@ const FeaturesTiles = ({
 
   const sectionHeader = {
     title: 'All lending pool interactions connected through trades in a single app!',
-    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
+    paragraph: 'No more switching between multiple websites for managing your position in lending protocols.'
   };
 
   return (
@@ -61,9 +61,9 @@ const FeaturesTiles = ({
             <div className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
+                  <div className="features-tiles-item-image mb-16" style={{padding:'5px'}}>
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-01.svg')}
+                      src={require('./../../assets/images/bar-chart.svg')}
                       alt="Features tile icon 01"
                       width={64}
                       height={64} />
@@ -83,9 +83,9 @@ const FeaturesTiles = ({
             <div className="tiles-item reveal-from-bottom" data-reveal-delay="200">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
+                  <div className="features-tiles-item-image mb-16" style={{padding:'5px'}}>
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-02.svg')}
+                      src={require('./../../assets/images/activity.svg')}
                       alt="Features tile icon 02"
                       width={64}
                       height={64} />
@@ -105,20 +105,36 @@ const FeaturesTiles = ({
             <div className="tiles-item reveal-from-bottom" data-reveal-delay="400">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require('./../../assets/images/feature-tile-icon-03.svg')}
-                      alt="Features tile icon 03"
-                      width={64}
-                      height={64} />
+                  <div className="overlapping-images-container mb-16" style={{padding:'5px'}}>
+                    <div style={{
+                      marginLeft: '100px',
+                      marginRight: '0px'
+                    }}>
+                      <Image
+                        src={require('./../../assets/images/compound-logo.svg')}
+                        alt="Features tile icon 03"
+                        width={64}
+                        height={64} />
+                    </div>
+                    <div style={{
+                      marginRight: '100px',
+                      marginLeft: '-20px'
+                    }}>
+                      <Image
+                        src={require('./../../assets/images/uni-logo.png')}
+                        alt="Features tile icon 03"
+                        width={64}
+                        height={64}
+                      />
+                    </div>
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Trade with the best
+                    Trade with the Best
                   </h4>
                   <p className="m-0 text-sm">
-                   We connect the best exchanges with the most liquid lenders.
+                    We connect the best exchanges such as Uniswap with the most liquid lenders like Compound.
                   </p>
                 </div>
               </div>
@@ -127,9 +143,9 @@ const FeaturesTiles = ({
             <div className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
+                  <div className="features-tiles-item-image mb-16" style={{padding:'5px'}}>
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-04.svg')}
+                      src={require('./../../assets/images/globe.svg')}
                       alt="Features tile icon 04"
                       width={64}
                       height={64} />
@@ -137,10 +153,10 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    No more centralization
+                    No Centralization
                   </h4>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
+                    History has shown that centralized entities cannot be trusted - 1Delta is one of the first fully decentralized crypto margin broker.
                   </p>
                 </div>
               </div>
@@ -149,9 +165,9 @@ const FeaturesTiles = ({
             <div className="tiles-item reveal-from-bottom" data-reveal-delay="200">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
+                  <div className="features-tiles-item-image mb-16" style={{padding:'5px'}}>
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-05.svg')}
+                      src={require('./../../assets/images/coffee.svg')}
                       alt="Features tile icon 05"
                       width={64}
                       height={64} />
@@ -162,7 +178,7 @@ const FeaturesTiles = ({
                     Easy to use
                   </h4>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
+                    Do you know how to use Uniswap? How about Compound? Then you already know how to use 1Delta!
                   </p>
                 </div>
               </div>
@@ -171,9 +187,9 @@ const FeaturesTiles = ({
             <div className="tiles-item reveal-from-bottom" data-reveal-delay="400">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
+                  <div className="features-tiles-item-image mb-16" style={{padding:'5px'}}>
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-06.svg')}
+                      src={require('./../../assets/images/tool.svg')}
                       alt="Features tile icon 06"
                       width={64}
                       height={64} />
@@ -184,7 +200,7 @@ const FeaturesTiles = ({
                     Tons of features
                   </h4>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
+                    Transfer your 1Delta account. Let an asset manager safely trade on your behalf. We give you full flexibility.
                   </p>
                 </div>
               </div>

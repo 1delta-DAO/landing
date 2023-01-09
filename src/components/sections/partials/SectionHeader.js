@@ -108,4 +108,50 @@ const SectionHeaderBright = ({
 SectionHeaderBright.propTypes = propTypes;
 SectionHeaderBright.defaultProps = defaultProps;
 
-export { SectionHeaderBright }
+
+
+const SectionHeaderBrightAlt = ({
+  className,
+  data,
+  children,
+  tag,
+  ...props
+}) => {
+
+  const classes = classNames(
+    'section-header',
+    className
+  );
+
+  const Component = tag;
+
+  return (
+    <>
+      {(data.title || data.paragraph) &&
+        <div
+          {...props}
+          className={classes}
+        >
+          <div className="container-xs">
+            {children}
+            {data.title &&
+              <Component className={
+                classNames(
+                  'mt-0 text-color-bright-avg-hover',
+                  data.paragraph ? 'mb-16' : 'mb-0'
+                )}>{data.title}</Component>
+            }
+            {data.paragraph &&
+              <p className="m-0">{data.paragraph}</p>
+            }
+          </div>
+        </div>
+      }
+    </>
+  );
+}
+
+SectionHeaderBrightAlt.propTypes = propTypes;
+SectionHeaderBrightAlt.defaultProps = defaultProps;
+
+export { SectionHeaderBright, SectionHeaderBrightAlt }

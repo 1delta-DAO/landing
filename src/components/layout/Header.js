@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom'
 import BoxScene from '../scene/Box';
+import { ButtonDark } from '../elements/Button';
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -175,7 +176,13 @@ const Header = ({
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <Link to="https://www.1delta.io/" className="button button-bright button-wide-mobile button-sm" onClick={closeMenu}>Go to App</Link>
+                        <ButtonDark
+                          tag='a'
+                          href="https://app.1delta.io/"
+                          className="button button-bright button-wide-mobile button-sm"
+                          onClick={closeMenu}>
+                          Go to App
+                        </ButtonDark>
                       </li>
                     </ul>}
                 </div>

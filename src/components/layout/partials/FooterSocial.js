@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
+
 const FooterSocial = ({
   className,
   ...props
@@ -18,20 +19,19 @@ const FooterSocial = ({
     >
       <ul className="list-reset">
         <li>
-          <a href="https://facebook.com/">
+          <a href="https://github.com/1delta-DAO">
             <svg
               width="16"
               height="16"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg">
-              <title>Facebook</title>
-              <path
-                d="M6.023 16L6 9H3V6h3V4c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V6H13l-1 3H9.28v7H6.023z" />
+              <title>Github</title>
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
             </svg>
           </a>
         </li>
         <li>
-          <a href="https://twitter.com/">
+          <a href="https://twitter.com/1DeltaDAO">
             <svg
               width="16"
               height="16"
@@ -43,7 +43,7 @@ const FooterSocial = ({
             </svg>
           </a>
         </li>
-        <li>
+        {/* <li>
           <a href="https://google.com/">
             <svg
               width="16"
@@ -60,7 +60,7 @@ const FooterSocial = ({
               </g>
             </svg>
           </a>
-        </li>
+        </li> */}
       </ul>
     </div>
   );

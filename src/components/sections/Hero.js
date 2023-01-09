@@ -65,11 +65,11 @@ const Hero = ({
             </h1>
             <div className="container-xs">
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                A decentralized margin brokerage connecting the best decentralized exchanges with the most liquid lending protocols.
+                A  <span className="text-color-primary-light" style={{fontWeight:'bold'}}>decentralized crypto margin broker</span> connecting the best decentralized exchanges with the most liquid lending protocols.
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
-                  <ButtonDark tag="a" wideMobile href="https://1delta.io/">
+                  <ButtonDark tag="a" wideMobile href="https://app.1delta.io/">
                     Get started
                   </ButtonDark>
                   {/* <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">

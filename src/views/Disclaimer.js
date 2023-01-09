@@ -1,27 +1,20 @@
 import React from 'react';
-// import sections
-import Hero from '../components/sections/Hero';
-import FeaturesTiles from '../components/sections/FeaturesTiles';
-import FeaturesSplit from '../components/sections/FeaturesSplit';
-import Testimonial from '../components/sections/Testimonial';
-import Cta from '../components/sections/Cta';
-import SectionHeader from '../components/sections/partials/SectionHeader';
+import { SectionHeaderBrightAlt } from '../components/sections/partials/SectionHeader';
 
 const Home = () => {
 
 
   const sectionHeader = {
     title: '1Delta DAO Terms of Service',
-    paragraph: 'Last modified: January 8, 2023.'
+    paragraph: 'Last modified: January 10, 2023.'
   };
 
   return (
     <>
-
       <section >
-        <div className="container-sm" style={{background: 'rgba(0, 0, 0, 0.3)' }}>
+        <div className="container-sm" style={{ background: 'rgba(0, 0, 0, 0.5)' }}>
           <div style={{ marginTop: '80px' }}>
-            <SectionHeader data={sectionHeader} className="center-content text-color-transition-avg" style={{ marginTop: '80px' }} />
+            <SectionHeaderBrightAlt data={sectionHeader} className="center-content text-color-transition-avg" style={{ marginTop: '80px' }} />
             <p className="m-0 text-color-transition-avg">
               These Terms of Service (the “Agreement”) explains the terms and conditions by which you may access and use https://app.1delta,io, a website-hosted user interface (the “Interface” or “App”) provided by 1Delta Labs (“we”, “our”, or “us”). You must read this Agreement carefully as it governs your use of the Interface. By accessing or using the Interface, you signify that you have read, understand, and agree to be bound by this Agreement in its entirety. If you do not agree, you are not authorized to access or use the Interface and should not use the Interface.
               NOTICE: This Agreement contains important information, including a binding arbitration provision and a class action waiver, both of which impact your rights as to how disputes are resolved. The Interface is only available to you — and you should only access the Interface — if you agree completely with these terms.
@@ -34,11 +27,11 @@ const Home = () => {
               </p>
             </p>
 
-            <h3 className="text-color-bright-avg-hover">  Modification of this Agreement</h3>
+            <h3 className="text-color-bright-avg-hover">Modification of this Agreement</h3>
             <p className="m-0 text-color-transition-avg">
               We reserve the right, in our sole discretion, to modify this Agreement from time to time. If we make any material modifications, we will notify you by updating the date at the top of the Agreement and by maintaining a current version of the Agreement at https://1delta,io/terms-of-service. All modifications will be effective when they are posted, and your continued accessing or use of the Interface will serve as confirmation of your acceptance of those modifications. If you do not agree with any modifications to this Agreement, you must immediately stop accessing and using the Interface.
             </p>
-            <h3 className="text-color-bright-avg-hover">  Description of Services provided through the Interface</h3>
+            <h3 className="text-color-bright-avg-hover">Description of Services provided through the Interface</h3>
             <p className="m-0 text-color-transition-avg">
               The Interface provides a web or mobile-based means of accessing the Protocol. The Interface is distinct from the Protocol and is one, but not the exclusive, means of accessing the Protocol. The Protocol itself has three versions, designated as v1, v2, and v3, each of which comprises open-source or source-available self-executing smart contracts that are deployed on various public blockchains, such as Ethereum. 1Delta Labs does not control or operate any version of the Protocol on any blockchain network. By using the Interface, you understand that you are not buying or selling digital assets from us and that we do not operate any liquidity pools on the Protocol or control trade execution on the Protocol. When traders pay fees for trades, those fees accrue to liquidity providers for the Protocol. As a general matter, Labs is not a liquidity provider into Protocol liquidity pools and liquidity providers are independent third parties. The Protocol was initially deployed on the Ethereum blockchain, and has since been deployed on several other blockchain networks including by parties other than 1Delta Labs. Deployments on other networks typically make use of cross-chain bridges, which allow assets native to one blockchain to be transferred to another blockchain. Please note that digital assets that have been “bridged” or “wrapped” to operate on other blockchain networks (including to blockchains compatible with the Ethereum Virtual Machine that are designed to ensure the Ethereum blockchain can effectively process more transactions or other blockchains that are frequently referred to as “Layer 2” solutions) are distinct from the original Ethereum mainnet asset.
             </p>
@@ -127,19 +120,28 @@ const Home = () => {
             <h3 className="text-color-bright-avg-hover">Limitation of Liability</h3>
             <p className="m-0 text-color-bright-avg-hover">
               UNDER NO CIRCUMSTANCES SHALL WE OR ANY OF OUR OFFICERS, DIRECTORS, EMPLOYEES, CONTRACTORS, AGENTS, AFFILIATES, OR SUBSIDIARIES BE LIABLE TO YOU FOR ANY INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES, INCLUDING (BUT NOT LIMITED TO) DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA, OR OTHER INTANGIBLE PROPERTY, ARISING OUT OF OR RELATING TO ANY ACCESS OR USE OF THE INTERFACE, NOR WILL WE BE RESPONSIBLE FOR ANY DAMAGE, LOSS, OR INJURY RESULTING FROM HACKING, TAMPERING, OR OTHER UNAUTHORIZED ACCESS OR USE OF THE INTERFACE OR THE INFORMATION CONTAINED WITHIN IT. WE ASSUME NO LIABILITY OR RESPONSIBILITY FOR ANY: (A) ERRORS, MISTAKES, OR INACCURACIES OF CONTENT; (B) PERSONAL INJURY OR PROPERTY DAMAGE, OF ANY NATURE WHATSOEVER, RESULTING FROM ANY ACCESS OR USE OF THE INTERFACE; (C) UNAUTHORIZED ACCESS OR USE OF ANY SECURE SERVER OR DATABASE IN OUR CONTROL, OR THE USE OF ANY INFORMATION OR DATA STORED THEREIN; (D) INTERRUPTION OR CESSATION OF FUNCTION RELATED TO THE INTERFACE; (E) BUGS, VIRUSES, TROJAN HORSES, OR THE LIKE THAT MAY BE TRANSMITTED TO OR THROUGH THE INTERFACE; (F) ERRORS OR OMISSIONS IN, OR LOSS OR DAMAGE INCURRED AS A RESULT OF THE USE OF, ANY CONTENT MADE AVAILABLE THROUGH THE INTERFACE; AND (G) THE DEFAMATORY, OFFENSIVE, OR ILLEGAL CONDUCT OF ANY THIRD PARTY.
-              Dispute Resolution
+            </p>
 
+            <h3 className="text-color-bright-avg-hover"> Dispute Resolution</h3>
+            <p className="m-0 text-color-transition-avg">
               We will use our best efforts to resolve any potential disputes through informal, good faith negotiations. If a potential dispute arises, you must contact us by sending an email to legal@1delta,io so that we can attempt to resolve it without resorting to formal dispute resolution. If we aren't able to reach an informal resolution within sixty days of your email, then you and we both agree to resolve the potential dispute according to the process set forth below.
-
+              <br />
               Any claim or controversy arising out of or relating to the Interface, this Agreement, or any other acts or omissions for which you may contend that we are liable, including (but not limited to) any claim or controversy as to arbitrability ("Dispute"), shall be finally and exclusively settled by arbitration under the JAMS Optional Expedited Arbitration Procedures. You understand that you are required to resolve all Disputes by binding arbitration. The arbitration shall be held on a confidential basis before a single arbitrator, who shall be selected pursuant to JAMS rules. The arbitration will be held in New York, New York, unless you and we both agree to hold it elsewhere. Unless we agree otherwise, the arbitrator may not consolidate your claims with those of any other party. Any judgment on the award rendered by the arbitrator may be entered in any court of competent jurisdiction.
-              Class Action and Jury Trial Waiver
+            </p>
 
+            <h3 className="text-color-bright-avg-hover">Class Action and Jury Trial Waiver</h3>
+            <p className="m-0 text-color-transition-avg">
               You must bring any and all Disputes against us in your individual capacity and not as a plaintiff in or member of any purported class action, collective action, private attorney general action, or other representative proceeding. This provision applies to class arbitration. You and we both agree to waive the right to demand a trial by jury.
-              Governing Law
+            </p>
 
+            <h3 className="text-color-bright-avg-hover">Governing Law</h3>
+            <p className="m-0 text-color-transition-avg">
               You agree that the laws of the State of New York, without regard to principles of conflict of laws, govern this Agreement and any Dispute between you and us. You further agree that the Interface shall be deemed to be based solely in the State of New York, and that although the Interface may be available in other jurisdictions, its availability does not give rise to general or specific personal jurisdiction in any forum outside the State of New York. Any arbitration conducted pursuant to this Agreement shall be governed by the Federal Arbitration Act. You agree that the federal and state courts of New York County, New York are the proper forum for any appeals of an arbitration award or for court proceedings in the event that this Agreement's binding arbitration clause is found to be unenforceable.
-              Entire Agreement
+            </p>
 
+            <h3 className="text-color-bright-avg-hover">Entire Agreement</h3>
+            <p className="m-0 text-color-transition-avg">
+              These terms constitute the entire agreement between you and us with respect to the subject matter hereof. This Agreement supersedes any and all prior or contemporaneous written and oral agreements, communications and other understandings (if any) relating to the subject matter of the terms.
             </p>
 
 

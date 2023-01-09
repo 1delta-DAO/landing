@@ -16,11 +16,14 @@
     -o-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
+	&:hover {
+        color: color(bright-primary);
+    }
 }
 
 .text-color-bright-avg-hover-selected {
 	color: color(bright-avg);
-	font-size: 20px;
+	font-size: 25px;
 	-moz-transition: all .2s ease-in;
     -o-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
