@@ -8,7 +8,7 @@ function Box(props) {
     const mesh = useRef();
 
     var material = new THREE.MeshPhysicalMaterial({
-        color: 'rgba(255, 0, 74, 0.95)',
+        color: 'rgb(255, 0, 74)',
         polygonOffset: true,
         thickness: 0.5,
         opacity: 0.5,
