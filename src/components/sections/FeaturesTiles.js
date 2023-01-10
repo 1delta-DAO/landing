@@ -156,7 +156,7 @@ const FeaturesTiles = ({
                     No Centralization
                   </h4>
                   <p className="m-0 text-sm">
-                    History has shown that centralized entities cannot be trusted - 1Delta is one of the first fully decentralized crypto margin broker.
+                    History has shown that centralized entities cannot be trusted - 1Delta is one of the first fully decentralized crypto margin brokers.
                   </p>
                 </div>
               </div>
