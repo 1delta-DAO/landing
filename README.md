@@ -1,6 +1,6 @@
 # 1Delta DAO landing page
 
-Deployed on [Open landing page](https://1delta.io).
+Deployed [here](https://1delta.io).
 
 ### Available Scripts
 
