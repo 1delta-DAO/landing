@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom'
 import BoxScene from '../scene/Box';
 import { ButtonDark } from '../elements/Button';
+import { OutboundLink } from 'react-ga';
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -170,7 +171,7 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
-                      <Link to="#0" onClick={closeMenu}><div className='text-color-bright-avg-hover'>Whitepaper</div></Link>
+                      <a href="https://drive.google.com/file/d/1Jop2_k7edf7l_ESYV-T-BakzlO_pCGux/view?usp=share_link" onClick={closeMenu}><div className='text-color-bright-avg-hover'>Whitepaper</div></a>
                     </li>
                   </ul>
                   {!hideSignin &&
