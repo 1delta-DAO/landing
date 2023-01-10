@@ -18,7 +18,7 @@ jobs:
           name: Build static files
           command: |
             npm install
-            npm run build
+            CI=false npm run build
       - run:
           name: Push static files to gcs
           command: gsutil -m rsync -d -R build gs://<< parameters.domain >>
