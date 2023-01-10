@@ -44,11 +44,10 @@ export default function BoxScene() {
     return (
         <div style={{ borderRadius: '100px', backgroundImage: `url(${background})`, width: '70px', height: '70px',backgroundSize: 'contain' }} >
             <Canvas dpr={window.devicePixelRatio} style={{ padding: '0px', margin: '0px', width: '70px', height: '70px' }} background={`url(${background})`}>
-                <perspectiveCamera position={[0, 0, 0.1]} fov={100} aspect={30}>
+                <perspectiveCamera position={[0, 0, 0.1]} fov={50} aspect={30}/>
                     <ambientLight posi />
                     <pointLight position={[2, -2, 10]} intensity={6} color={'white'} />
                     <Box position={[0, 0, 0]} color='red' />
-                </perspectiveCamera>
             </Canvas>
         </div>
     );
