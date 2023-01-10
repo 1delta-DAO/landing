@@ -67,10 +67,10 @@ const Hero = ({
                 A  <span className="text-color-primary-light" style={{ fontWeight: 'bold' }}>decentralized crypto margin broker</span> connecting the best decentralized exchanges with the most liquid lending protocols.
               </p>
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                We have a beta deployment on <span className="text-color-primary-light" style={{ fontWeight: 'bold' }}>Polygon</span>{' '}
-                and testnet deployments on <span className="text-color-primary-light" style={{ fontWeight: 'bold' }}>Goerli</span>{' '}
-                and <span className="text-color-primary-light" style={{ fontWeight: 'bold' }}>Polygon Mumbai</span>.
-                </p>
+                We have a beta deployment on <span className="text-color-primary-light">Polygon</span>{' '}
+                and testnet deployments on <span className="text-color-primary-light">Goerli</span>{' '}
+                and <span className="text-color-primary-light">Polygon Mumbai</span>.
+              </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
                   <ButtonDark tag="a" wideMobile href="https://app.1delta.io/">
