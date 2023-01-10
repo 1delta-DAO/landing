@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom'
 import BoxScene from '../scene/Box';
 import { ButtonDark } from '../elements/Button';
-import { OutboundLink } from 'react-ga';
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -23,17 +22,6 @@ const defaultProps = {
   bottomDivider: false
 }
 
-function pickHex(color1, color2, weight) {
-  var w1 = weight;
-  var w2 = 1 - w1;
-  var rgb = [Math.round(color1[0] * w1 + color2[0] * w2),
-  Math.round(color1[1] * w1 + color2[1] * w2),
-  Math.round(color1[2] * w1 + color2[2] * w2)];
-  return rgb;
-}
-
-const basePalette = ['#ff5eb9', '#4c2dfa']
-
 const Header = ({
   className,
   navPosition,
@@ -44,7 +32,7 @@ const Header = ({
   ...props
 }) => {
   const location = useLocation();
-  console.log(location.pathname);
+
   const [isActive, setIsactive] = useState(false);
 
   const nav = useRef(null);
@@ -89,9 +77,6 @@ const Header = ({
     className
   );
 
-
-
-  const [colors, setColors] = useState(['#ff5eb9', '#4c2dfa'])
   const [color, setColor] = useState('linear-gradient(to right, rgba(4, 14, 52, 0.7) 1%, rgba(29, 66, 148, 0.7), rgba(140, 15, 73, 0.7), rgba(43, 0, 11, 0.7))')
   var body = document.body,
     html = document.documentElement;
@@ -102,15 +87,19 @@ const Header = ({
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", () => {
-        setColors([pickHex(basePalette[0], basePalette[1], window.pageYOffset / height), 'white'])
         setColor(`linear-gradient(to right, rgba(4, 14, 52, 0.7) 1%, rgba(29, 66, 148, 0.7), rgba(140, 15, 73, 0.7), rgba(43, 0, 11, 0.7) ${Math.max(100 - Math.round(window.pageYOffset * 100 / height / 10), 0)}%)`)
       }
       );
     }
-  }, []);
+  },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
+  );
+
   const [isHome, isDisclaimer] = useMemo(() => {
     return [!location.pathname.includes('disclaimer'), location.pathname.includes('disclaimer')]
   }, [location])
+
   return (
     <header
       {...props}
@@ -144,8 +133,8 @@ const Header = ({
                     'header-nav',
                     isActive && 'is-active'
                   )}
-                  style={{background: isActive && color}}
-                  >
+                style={{ background: isActive && color }}
+              >
                 <div className="header-nav-inner">
                   <ul className={
                     classNames(

@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 import ButtonGroup from '../elements/ButtonGroup';
-import Button, { ButtonDark } from '../elements/Button';
-import Image from '../elements/Image';
+import { ButtonDark } from '../elements/Button';
 import Modal from '../elements/Modal';
 
 const propTypes = {
@@ -27,10 +26,10 @@ const Hero = ({
 
   const [videoModalActive, setVideomodalactive] = useState(false);
 
-  const openModal = (e) => {
-    e.preventDefault();
-    setVideomodalactive(true);
-  }
+  // const openModal = (e) => {
+  //   e.preventDefault();
+  //   setVideomodalactive(true);
+  // }
 
   const closeModal = (e) => {
     e.preventDefault();
@@ -65,7 +64,7 @@ const Hero = ({
             </h1>
             <div className="container-xs">
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                A  <span className="text-color-primary-light" style={{fontWeight:'bold'}}>decentralized crypto margin broker</span> connecting the best decentralized exchanges with the most liquid lending protocols.
+                A  <span className="text-color-primary-light" style={{ fontWeight: 'bold' }}>decentralized crypto margin broker</span> connecting the best decentralized exchanges with the most liquid lending protocols.
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
