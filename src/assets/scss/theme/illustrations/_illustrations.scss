@@ -21,5 +21,7 @@
 
 // Features illustration 02
 .illustration-section-02::after {
-	@include illustration('illustration-section-02.svg', 100%, 253px, null, null, 30px);
+	filter: blur(2px) opacity(50%);
+	-webkit-filter: blur(2px) opacity(50%);
+	@include illustration('illustration-section-02.svg', 100%, 253px, null, null, 90px);
 }
