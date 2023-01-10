@@ -13,7 +13,7 @@ const Banner = ({
           <div className="banner-inner text-xxs">
             <div className='banner-container'>
               <a className="banner-link banner-link-white" href="https://app.1delta.io/" target="_blank" rel="noopener noreferrer">
-                Go to the <span className="banner-hide-on-sm"> 1Delta App</span>
+                Go to the <span style={{ fontWeight: 'bold' }}> 1Delta App</span>
               </a>
               <span className="banner-separator">or</span>
               <a className="banner-link banner-link-red" href="https://docs.1delta.io/" target="_blank" rel="noopener noreferrer">
