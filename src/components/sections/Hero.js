@@ -4,6 +4,7 @@ import { SectionProps } from '../../utils/SectionProps';
 import ButtonGroup from '../elements/ButtonGroup';
 import { ButtonDark } from '../elements/Button';
 import Modal from '../elements/Modal';
+import Image from '../elements/Image';
 
 const propTypes = {
   ...SectionProps.types
@@ -62,15 +63,28 @@ const Hero = ({
             <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
               The <span className="text-color-primary-light">1Delta</span> Protocol
             </h1>
-            <div className="container-xs">
+            <div className="container-xs" >
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
                 A  <span className="text-color-primary-light" style={{ fontWeight: 'bold' }}>decentralized crypto margin broker</span> connecting the best decentralized exchanges with the most liquid lending protocols.
               </p>
-              <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                We have a beta deployment on <span className="text-color-primary-light">Polygon</span>{' '}
-                and testnet deployments on <span className="text-color-primary-light">Goerli</span>{' '}
-                and <span className="text-color-primary-light">Polygon Mumbai</span>.
-              </p>
+              <div className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                We have a beta deployment on
+                <div style={{ display: 'flex', flexDirection: 'row', width: '120px', alignSelf: 'center', alignItems: 'center', justifyContent: 'center' }}>
+                  <Image
+                    src={require('./../../assets/images/polygon.svg')}
+                    alt="Polygon"
+                    width={30}
+                    height={30}
+                  />
+                  <span className="text-color-base-intense" style={{fontWeight: 'bold'}} >
+                    Polygon
+                  </span>
+                </div>{' '}
+                <div>
+                  and testnet deployments on <span className="text-color-base-light">Goerli</span>{' '}
+                  and <span className="text-color-base-light">Polygon Mumbai</span>.
+                </div>
+              </div>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
                   <ButtonDark tag="a" wideMobile href="https://app.1delta.io/">

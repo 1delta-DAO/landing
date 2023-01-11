@@ -129,6 +129,24 @@
 	color: color(primary-light);
 }
 
+.text-color-base-intense {
+	color: color(base-intense);
+	// text-shadow: 0.1px 0.1px 1px rgba(108, 164, 255, 0.409), 0 0 0.1em rgba(221, 108, 255, 0.409), 0 0 0.1em rgb(112, 4, 212);
+	// // background: -webkit-linear-gradient(rgb(20, 0, 57), rgb(43, 43, 43), rgb(116, 116, 116));
+	// // -webkit-background-clip: text;
+	// // -webkit-text-fill-color: transparent;
+	// color: color(transition);
+}
+
+.text-color-base-light {
+	color: color(base-light);
+	// text-shadow: 0.1px 0.1px 1px rgba(108, 164, 255, 0.409), 0 0 0.1em rgba(221, 108, 255, 0.409), 0 0 0.1em rgb(112, 4, 212);
+	// // background: -webkit-linear-gradient(rgb(20, 0, 57), rgb(43, 43, 43), rgb(116, 116, 116));
+	// // -webkit-background-clip: text;
+	// // -webkit-text-fill-color: transparent;
+	// color: color(transition);
+}
+
 .text-color-secondary {
 	color: color(secondary);
 }

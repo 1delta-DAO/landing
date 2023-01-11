@@ -14,7 +14,8 @@ $palette: (
 	light: (
 		1:	#040E34,
 		2:	#0B193F,
-		3:	#09265E
+		3:	#09265E,
+		4:	#2e095e
 	),
 	dark: (
 		1: #151719,
@@ -64,6 +65,8 @@ $color: (
 	// ↓ Inverted colors
 	heading-inverse:		get-color(dark, 1),
 	base-inverse:			get-color(light, 3),
+	base-intense:			get-color(light, 4),	
+	base-light:				get-color(light, 1),
 	high-contrast-inverse: 	get-color(dark, 1),
 	mid-contrast-inverse: 	get-color(dark, 2),
 	low-contrast-inverse: 	get-color(light, 3),
