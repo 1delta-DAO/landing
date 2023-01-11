@@ -73,7 +73,7 @@ const Hero = ({
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
-                  <ButtonDark tag="a" wideMobile href="https://app.1delta.io/">
+                  <ButtonDark tag='a' target="_blank" wideMobile href="https://app.1delta.io/">
                     Get started
                   </ButtonDark>
                   {/* <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
