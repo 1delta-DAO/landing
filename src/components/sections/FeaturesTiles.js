@@ -44,8 +44,8 @@ const FeaturesTiles = ({
   );
 
   const sectionHeader = {
-    title: 'All lending pool interactions connected through trades in a single app!',
-    paragraph: 'No more switching between multiple websites for managing your position in lending protocols.'
+    title: 'Unified trading experience',
+    paragraph: 'No more switching between multiple web apps to manage your leveraged positions. 1Delta was built by traders with the goal of creating the best possible decentralized trading experience.'
   };
 
   return (
@@ -74,7 +74,7 @@ const FeaturesTiles = ({
                     Instant Leverage
                   </h4>
                   <p className="m-0 text-sm">
-                    We allow you to use flash swaps to direcly borrow and supply on margin.
+                    Use flash swaps through Uniswap V3 to directly borrow and supply on margin.
                   </p>
                 </div>
               </div>
@@ -96,7 +96,7 @@ const FeaturesTiles = ({
                     Prevent Liquidations
                   </h4>
                   <p className="m-0 text-sm">
-                    You can self-liquidate in a single click if necesseray - no fees or manual withdrawals!
+                    You can self-liquidate in a single click - no penalties or manual withdrawals.
                   </p>
                 </div>
               </div>
@@ -134,7 +134,7 @@ const FeaturesTiles = ({
                     Trade with the Best
                   </h4>
                   <p className="m-0 text-sm">
-                    We connect the best exchanges such as Uniswap with the most liquid lenders like Compound.
+                    We connect the best exchanges like Uniswap with the most liquid lenders like Compound.
                   </p>
                 </div>
               </div>
@@ -156,7 +156,7 @@ const FeaturesTiles = ({
                     No Centralization
                   </h4>
                   <p className="m-0 text-sm">
-                    History has shown that centralized entities cannot be trusted - 1Delta is one of the first fully decentralized crypto margin brokers.
+                    History has shown that centralized brokers can't be trusted - 1Delta is the first decentralized broker that doesn't depend on its own liquidity.
                   </p>
                 </div>
               </div>
@@ -178,7 +178,7 @@ const FeaturesTiles = ({
                     Easy to use
                   </h4>
                   <p className="m-0 text-sm">
-                    Do you know how to use Uniswap? How about Compound? Then you already know how to use 1Delta!
+                    If you've used Uniswap or Compound then you'll feel right at home. 1Delta provides traders a familiar experience with minimal onboarding.
                   </p>
                 </div>
               </div>
@@ -197,10 +197,10 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Tons of features
+                    Asset Management
                   </h4>
                   <p className="m-0 text-sm">
-                    Transfer your 1Delta account. Let an asset manager safely trade on your behalf. We give you full flexibility.
+                    You can optionally delegate access to your accounts so that an asset manager can safely trade on your behalf.
                   </p>
                 </div>
               </div>

@@ -50,8 +50,8 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: 'We aim for the best UX',
-    paragraph: 'All relevant leding protocol parameters and DEX trade data is direcly available.'
+    title: 'DeFi margin trading, made simple',
+    paragraph: 'All relevant lending protocol parameters and DEX trade data are directly available.'
   };
 
   return (
@@ -67,13 +67,13 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-transition fw-600 tt-u mb-8">
-                  Lightning fast tradeflow
+                  Lightning fast trade flow
                 </div>
                 <h3 className="mt-0 mb-12 text-color-transition">
                   Manage your risk
                 </h3>
                 <p className="m-0 text-color-transition">
-                  Our app gives a full overview of all required risk parameters. You immediately see if you are close to liquidation - and can directly take action to prevent that from happening.
+                 The app gives you a full overview of your risk parameters. You can immediately see if you are at risk of liquidation so that you can take action.
                 </p>
               </div>
               <div className={
@@ -96,10 +96,10 @@ const FeaturesSplit = ({
                   Take exposure safely
                 </div>
                 <h3 className="mt-0 mb-12 text-color-transition">
-                  Squeeze out the highest possible leverage
+                  Take on smart leverage
                 </h3>
                 <p className="m-0 text-color-transition">
-                  You can direcy see which exposure is ideal for your current positions. With being able to self-liquidate, you can use higer leverages than it would be possible otherwise. 
+                  Features like one-click self-liquidation and health indicators ensure that you can safely leverage your positions to get the most out of your trades.
                 </p>
               </div>
               <div className={
@@ -119,13 +119,13 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-transition fw-600 tt-u mb-8">
-                  The best from both worlds
+                  The best of both worlds
                 </div>
                 <h3 className="mt-0 mb-12 text-color-transition">
-                  A perfect mix of components
+                  Complexity reduced down to a single click
                 </h3>
                 <p className="m-0 text-color-transition">
-                  We unite the best of both worlds. Flash swaps allow you to execute collateral and debt swaps in a single click. You can also easily see whether a trade is beneficial or bad for your account health.
+                  We unite the best of both worlds. Flash swaps allow you to execute collateral and debt swaps in a single click. You can also easily assess the impact of a trade on your account health before you execute.
                 </p>
               </div>
               <div className={
