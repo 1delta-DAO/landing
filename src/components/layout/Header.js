@@ -160,7 +160,7 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
-                      <a href="https://drive.google.com/file/d/1Jop2_k7edf7l_ESYV-T-BakzlO_pCGux/view?usp=share_link" onClick={closeMenu}><div className='text-color-bright-avg-hover'>Whitepaper</div></a>
+                      <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1Jop2_k7edf7l_ESYV-T-BakzlO_pCGux/view?usp=share_link" onClick={closeMenu}><div className='text-color-bright-avg-hover'>Whitepaper</div></a>
                     </li>
                   </ul>
                   {!hideSignin &&
@@ -170,6 +170,8 @@ const Header = ({
                       <li>
                         <ButtonDark
                           tag='a'
+                          target="_blank"
+                          rel="noopener noreferrer"
                           href="https://app.1delta.io/"
                           className="button button-bright button-wide-mobile button-sm"
                           onClick={closeMenu}>
