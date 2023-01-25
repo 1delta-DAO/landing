@@ -121,6 +121,7 @@
     &:hover {
         background-color: color-bg(button-primary-hover);
 		border-color: color-border(button-primary-hover);
+		cursor: pointer;
     }
 
 	&.is-loading {

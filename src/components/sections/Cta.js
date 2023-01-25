@@ -115,7 +115,7 @@ function ModalContent() {
           </div>
 
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-            <button type="submit" className="button-bright" style={{ width: '200px', height: '40px' }}>
+            <button type="submit" className="button-bright" style={{ width: '200px', height: '40px', fontWeight: 'bold' }}>
               Send!
             </button>
           </div>
@@ -230,7 +230,7 @@ const Cta = ({
               </p>
             </div>
             <div className="cta-action" >
-              <button className='button-bright' onClick={() => setShowModal(true)} style={{ width: '200px', height: '40px' }}>
+              <button className='button-bright' onClick={() => setShowModal(true)} style={{ width: '200px', height: '40px', fontWeight: 'bold' }}>
                 Contact Us!
               </button>
               {/* <Input id="newsletter" type="email" label="Subscribe" labelHidden hasIcon="right" placeholder="Your email"
