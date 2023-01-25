@@ -156,7 +156,7 @@ function ModalContent() {
       {error && <div
         className="container-sm"
         style={{ display: 'flex', direction: 'column', alignItems: 'center', justifyContent: 'center', background: 'rgba(0, 0, 0, 0.5)', borderRadius: '7px', height: '100px' }}>
-        <div className="m-0 text-color-transition-avg" style={{ fontSize: '14px', textAlign:'center' }}>
+        <div className="m-0 text-color-transition-avg" style={{ fontSize: '14px', textAlign: 'center' }}>
           Error: {error}
         </div>
       </div>}
