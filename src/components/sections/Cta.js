@@ -20,7 +20,7 @@ function ModalContent() {
 
   const [contactData, setContactData] = useState({ ...initialFormState });
   const [success, setSuccess] = useState(false)
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
   const handleChange = ({ target }) => {
