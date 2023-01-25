@@ -32,10 +32,6 @@ function ModalContent() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("args", emailKey,
-      templateKey,
-      e.target,
-      publicKey,)
     setLoading(true)
     emailjs
       .sendForm(
