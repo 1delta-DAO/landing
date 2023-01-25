@@ -20,7 +20,7 @@ function ModalContent() {
 
   const [contactData, setContactData] = useState({ ...initialFormState });
   const [success, setSuccess] = useState(false)
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
 
   const handleChange = ({ target }) => {
@@ -120,13 +120,13 @@ function ModalContent() {
       </>}
       {loading && <div
         className="container-sm"
-        style={{ display: 'flex', direction: 'column', alignItems: 'center', justifyContent: 'center', background: 'rgba(0, 0, 0, 0.5)', borderRadius: '7px', height: '100px' }}>
+        style={{ display: 'flex', direction: 'column', alignItems: 'center', justifyContent: 'center', background: 'rgba(0, 0, 0, 0.5)', borderRadius: '7px', height: '120px' }}>
         <div>
           <div className="m-0 text-color-transition-avg">
             Sending message
           </div>
           <div className="snippet" data-title="dot-windmill"
-            style={{ display: 'flex', flexDirection: 'center', alignItems: 'center', justifyContent: 'center' }}>
+            style={{ display: 'flex', flexDirection: 'center', alignItems: 'center', justifyContent: 'center', marginBottom:'20px' }}>
             <div className="stage"
               style={{ display: 'flex', flexDirection: 'center', marginTop: '20px', alignItems: 'center', justifyContent: 'center' }}>
               <div className="dot-windmill"></div>
@@ -137,13 +137,13 @@ function ModalContent() {
       {!error && success && <div className="container-sm"
         style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: 'rgba(0, 0, 0, 0.5)', borderRadius: '7px' }}
       ><br />
-        <CheckCircle color='rgba(108, 255, 204, 1)' size={50} style={{ filter: 'drop-shadow(3px 5px 2px rgba(108, 255, 204, 0.5))' }} />
+        <CheckCircle color='rgba(108, 255, 204, 1)' size={50} style={{ filter: 'drop-shadow(3px 5px 2px rgba(108, 255, 204, 0.5))', marginTop:'10px' }} />
         <br />
         <div className="m-0 text-color-transition-avg">
           Success!
         </div>
         <br />
-        <div className="m-0 text-color-transition-avg" style={{ textAlign: 'center' }}>
+        <div className="m-0 text-color-transition-avg" style={{ textAlign: 'center', marginBottom:'10px' }}>
           Stay tuned - We will reply as soon as we can.
         </div>
         <br />
