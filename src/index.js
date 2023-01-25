@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
-
+import path from 'path';
+import dotenv from 'dotenv';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
@@ -10,6 +11,8 @@ import * as serviceWorker from './serviceWorker';
 import './assets/scss/style.scss';
 
 const history = createBrowserHistory();
+
+dotenv.config({ path: path.join(__dirname, '../.env') });
 
 ReactDOM.render(
   <Router history={history}>
