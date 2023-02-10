@@ -21,7 +21,7 @@ jobs:
             CI=false npm run build
       - run:
           name: Push static files to gcs
-          command: gsutil -m rsync -d -R build gs://<< parameters.domain >>
+          command: gsutil -m rsync -d -R .next gs://<< parameters.domain >>
       - run: sleep 7
       - run:
           name: Remove Cache Control from static files
