@@ -36,6 +36,7 @@ export const ButtonLightTop = styled.button`
 
 export const ButtonLightLink = styled.a`
 	border-radius: 24px;
+	width: 300px;
 	color: ${buttonColor.buttonBright};
     background-color: ${buttonColor.buttonPrimary};
 	border-color: ${borderColor.dividerInverse};

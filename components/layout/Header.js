@@ -12,8 +12,8 @@ import styled from 'styled-components';
 
 
 const HeaderText = styled.ul`
-font-size: ${props  => props.isSelected ? '20px' : '16px'};
-${props  => props.isSelected ? 'margin-bottom: 5px;' : ''}
+font-size: ${props => props.isSelected ? '20px' : '16px'};
+${props => props.isSelected ? 'margin-bottom: 5px;' : ''}
    @media (max-width: 412px) {
     display: flex;
     align-items: center;;
@@ -119,7 +119,7 @@ const Header = ({
   const [isHome, isDisclaimer] = useMemo(() => {
     return [location === '/', location.includes('disclaimer')]
   }, [location])
-  
+
   return (
     <SiteHeader
       style={{
@@ -151,39 +151,41 @@ const Header = ({
                 ref={nav}
                 // style={{  flexDirection: 'row', justifyContent: 'center', alignItems:'center', marginLeft: '100px' }}
               > */}
-                <HeaderContainer>
-                  <HeaderText isSelected={isHome}>
-                      <Link href="/" onClick={closeMenu}>
-                        <div className={isHome ? 'text-color-bright-avg-hover-selected' : 'text-color-bright-avg-hover'}>
-                          Home
-                        </div>
+              <HeaderContainer>
+                <HeaderText isSelected={isHome}>
+                  <Link href="/" onClick={closeMenu}>
+                    <div className={isHome ? 'text-color-bright-avg-hover-selected' : 'text-color-bright-avg-hover'}>
+                      Home
+                    </div>
+                  </Link>
+                </HeaderText>
+                <HeaderText isSelected={isDisclaimer}>
+                  <Link href="/disclaimer" onClick={closeMenu}>
+                    <div className={isDisclaimer ? 'text-color-bright-avg-hover-selected' : 'text-color-bright-avg-hover'}>
+                      Disclaimer
+                    </div>
+                  </Link>
+                </HeaderText>
+                <HeaderText isSelected={false}>
+                  <Link target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1Jop2_k7edf7l_ESYV-T-BakzlO_pCGux/view?usp=share_link" onClick={closeMenu}><div className='text-color-bright-avg-hover'>Whitepaper</div></Link>
+                </HeaderText>
+                {!hideSignin &&
+                  <ul
+                    className="list-reset header-nav-right"
+                  >
+                    <ButtonLightTop
+                      tag='a'
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://app.1delta.io/"
+                      onClick={closeMenu}>
+                      <Link href={"https://app.1delta.io/"} style={{color:'white'}}>
+                        Go to App
                       </Link>
-                  </HeaderText>
-                  <HeaderText isSelected={isDisclaimer}>
-                      <Link href="/disclaimer" onClick={closeMenu}>
-                        <div className={isDisclaimer ? 'text-color-bright-avg-hover-selected' : 'text-color-bright-avg-hover'}>
-                          Disclaimer
-                        </div>
-                      </Link>
-                  </HeaderText>
-                  <HeaderText isSelected={false}>
-                      <Link target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1Jop2_k7edf7l_ESYV-T-BakzlO_pCGux/view?usp=share_link" onClick={closeMenu}><div className='text-color-bright-avg-hover'>Whitepaper</div></Link>
-                  </HeaderText>
-                  {!hideSignin &&
-                    <ul
-                      className="list-reset header-nav-right"
-                    >
-                        <ButtonLightTop
-                          tag='a'
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href="https://app.1delta.io/"
-                          onClick={closeMenu}>
-                          Go to App
-                        </ButtonLightTop>
-                    </ul>
-                  }
-                </HeaderContainer>
+                    </ButtonLightTop>
+                  </ul>
+                }
+              </HeaderContainer>
               {/* </NavContainerInternal> */}
             </NavContainer>}
         </SiteHeaderInner>
