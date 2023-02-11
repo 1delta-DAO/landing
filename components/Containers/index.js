@@ -25,29 +25,28 @@ export const NavContainer = styled.div`
 `
 
 export const BackgroundTriangle = styled.div`
-height:100%;
-position: fixed;
-opacity: 0.1;
-width: 100%;
+	height:100%;
+	position: fixed;
+	opacity: 0.1;
+	width: 100%;
 `
 
 export const BackgroundNoodle = styled.div`
-height:100%;
-position: fixed;
-opacity: 0.2;
-width: 100%;
+	height:100%;
+	position: fixed;
+	opacity: ${({ isFocused }) => isFocused ? 1 : 0.2};
+	width: 100%;
 `
 
 
 export const TilesContainer = styled.div`
-align-items: center;
-justify-content: center;
-width: 100%;
-max-width: 1200px;
-display: flex;
-direction: row;
-flex-wrap: wrap;
-
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 1200px;
+	display: flex;
+	direction: row;
+	flex-wrap: wrap;
 `
 
 export const tilesItemWidth = '330px';
