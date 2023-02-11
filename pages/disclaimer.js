@@ -1,7 +1,8 @@
 import React from 'react';
-import { BackgroundTriangle } from '../components/Containers';
+import { BackgroundNoodle, BackgroundTriangle } from '../components/Containers';
 import Footer from '../components/Footer';
 import Header from '../components/layout/Header';
+import NoodleScene from '../components/scene/NoodleScene';
 import Triangles from '../components/scene/Triangles';
 import { SectionHeaderBrightAlt } from '../components/sections/partials/SectionHeader';
 
@@ -15,12 +16,15 @@ const Disclaimer = () => {
 
   return (
     <>
-      <BackgroundTriangle>
+      {/* <BackgroundTriangle>
         <Triangles />
-      </BackgroundTriangle>
+      </BackgroundTriangle> */}
+      <BackgroundNoodle>
+        <NoodleScene />
+      </BackgroundNoodle>
       <Header />
       <section >
-        <div className="container-sm" style={{ width: '90%', maxWidth:'600px', margin:'0 auto'}}>
+        <div className="container-sm" style={{ width: '90%', maxWidth: '600px', margin: '0 auto' }}>
           <div style={{ marginTop: '80px' }}>
             <SectionHeaderBrightAlt data={sectionHeader} className="center-content text-color-transition-avg" style={{ marginTop: '80px' }} />
             <p className="m-0 text-color-transition-avg">

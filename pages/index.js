@@ -10,18 +10,24 @@ import ContentBlock from '../components/ContentBlock';
 import MiddleBlock, { CtaMiddleBlock, HeaderMiddleBlock, MiddleBlockWithTiles } from '../components/MiddleBlock';
 import DeltaHeader from '../components/layout/Header';
 // Common
-import { BackgroundTriangle } from '../components/Containers';
-import Triangles from '../components/scene/Triangles';
+import { BackgroundNoodle, BackgroundTriangle } from '../components/Containers';
+// import Triangles from '../components/scene/Triangles';
 import Footer from '../components/Footer';
+import NoodleScene from '../components/scene/NoodleScene';
 // dotenv.config({ path: path.join(__dirname, '../.env') });
 
 
 const Home = () => {
   return (
     <>
-      <BackgroundTriangle>
+      {/* <BackgroundTriangle>
         <Triangles />
-      </BackgroundTriangle>
+      </BackgroundTriangle> */}
+
+      <BackgroundNoodle>
+        <NoodleScene />
+      </BackgroundNoodle>
+      
       <GlobalStyles />
       <DeltaHeader />
 

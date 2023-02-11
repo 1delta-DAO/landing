@@ -31,6 +31,13 @@ opacity: 0.1;
 width: 100%;
 `
 
+export const BackgroundNoodle = styled.div`
+height:100%;
+position: fixed;
+opacity: 0.2;
+width: 100%;
+`
+
 
 export const TilesContainer = styled.div`
 align-items: center;
@@ -80,15 +87,9 @@ export const FeaturesTilesItemImage = styled.div`
     height: 70px;
 	display: inline-flex;
 	border-radius: 50%;
-	background: radial-gradient(
-		circle at 10% 10%,
-		#ADBCFF,
-		#DEE1FF,
-		#EDEFF8,
-		#F9ECF1,
-		#FFD9E4,
-		#FBA4C0,
-		#FF6FA3);
+	box-shadow: inset 0 0 5px black;
+	filter: drop-shadow(5px 2px 3px rgb(0 0 0 / 0.4));
+	background: white;
 `
 
 export const OverlappingImageContainer = styled.div`
