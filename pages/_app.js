@@ -37,8 +37,8 @@ function MyApp({ Component, pageProps }) {
           name='The 1Delta protocol'
           content='Trade crypto on 1Delta DAO on leverage.'
         />{' '}
-        <meta name='keywords' content='Keywords' />
-        <meta property='og:title' content='BonnetHood' key='title' />
+        <meta name='keywords' content='decentralized crypto leverage margin broker polygon uniswap dex compound 0vix' />
+        <meta property='og:title' content='1Delta DAO - The decentralized crypto margin broker.' key='title' />
         <meta name='theme-color' content='#f0f6f0' />
         <title>1Delta DAO - The decentralized margin broker.</title>
       </Head>
