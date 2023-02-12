@@ -11,10 +11,6 @@ border-radius: 100px; background-image: url(${background});
 background-size: contain;
 width: 70px;
 height: 70px;
-@media (max-width: 412px) {
-    width: 50px;
-    height: 50px;
-  }
 `
 
 function Box(props) {
