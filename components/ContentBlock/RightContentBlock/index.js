@@ -1,9 +1,7 @@
 import { Row, Col } from 'antd';
-import Slide from 'react-reveal/Slide';
-
+import { Slide } from 'react-awesome-reveal';
 import SvgIcon from '../../../common/SvgIcon';
 import Button from '../../../common/Button';
-
 import * as S from './styles';
 import { useWindowSize } from '../../../utils/useWindowSize';
 
@@ -25,7 +23,7 @@ const RightBlock = ({ title, content, button, icon, t, id }) => {
         <Col lg={11} md={11} sm={11} xs={24}>
           <Slide left>
             <S.ContentWrapper style={{ padding: '50px', marginBottom: isMobile ? '-25px' : '0px' }}>
-              <h6 style={{ fontWeight: 'bold', lineHeight:'40px' }}>{title}</h6>
+              <h6 style={{ fontWeight: 'bold', lineHeight: '40px' }}>{title}</h6>
               <S.Content>{content}</S.Content>
               <S.ButtonWrapper>
                 {button &&

@@ -1,15 +1,7 @@
 import { Row, Col } from 'antd';
-import ButtonGroup from 'antd/lib/button/button-group';
-import Slide from 'react-reveal/Slide';
-
+import { Slide } from 'react-awesome-reveal';
 import SvgIcon from '../../../common/SvgIcon';
 import { useWindowSize } from '../../../utils/useWindowSize';
-import { ButtonLightLink } from '../../Buttons';
-import { HeroContent } from '../../Containers';
-import Image from '../../elements/Image';
-import BoxScene from '../../scene/Box';
-import { PrimaryLight } from '../../Text';
-
 import * as S from './styles';
 
 const LeftContentBlock = ({ icon, title, content, section, t, id }) => {
@@ -22,7 +14,7 @@ const LeftContentBlock = ({ icon, title, content, section, t, id }) => {
     <S.LefttBlockContainer>
       <Row type='flex' justify='space-between' align='middle' id={id}>
         <Col lg={11} md={11} sm={12} xs={24}>
-          <Slide left>
+          <Slide left overflowY>
             <SvgIcon
               src={icon}
               className='about-block-image'
