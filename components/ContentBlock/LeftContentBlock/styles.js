@@ -18,7 +18,7 @@ export const ContentWrapper = styled.div`
   position: relative;
   max-width: 540px;
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 450px) {
     margin: 2rem 0;
   }
 `;

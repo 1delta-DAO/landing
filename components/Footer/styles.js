@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 export const Footer = styled.footer`
-  background: #f0f6f0;
+  background: rgba(255, 255, 255, 0.36);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0px 0 5px 5px rgb(0 0 0 / 31%);
   padding: 2.5rem 0;
 `;
 

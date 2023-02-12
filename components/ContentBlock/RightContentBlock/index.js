@@ -5,8 +5,14 @@ import SvgIcon from '../../../common/SvgIcon';
 import Button from '../../../common/Button';
 
 import * as S from './styles';
+import { useWindowSize } from '../../../utils/useWindowSize';
 
 const RightBlock = ({ title, content, button, icon, t, id }) => {
+
+  const windowSize = useWindowSize()
+
+  const isMobile = windowSize.width < 450
+
   const scrollTo = (id) => {
     const element = document.getElementById(id);
     element.scrollIntoView({
@@ -18,8 +24,8 @@ const RightBlock = ({ title, content, button, icon, t, id }) => {
       <Row type='flex' justify='space-between' align='middle' id={id}>
         <Col lg={11} md={11} sm={11} xs={24}>
           <Slide left>
-            <S.ContentWrapper>
-              <h6>{title}</h6>
+            <S.ContentWrapper style={{ padding: '50px', marginBottom: isMobile ? '-25px' : '0px' }}>
+              <h6 style={{ fontWeight: 'bold', lineHeight:'40px' }}>{title}</h6>
               <S.Content>{content}</S.Content>
               <S.ButtonWrapper>
                 {button &&

@@ -1,15 +1,14 @@
 import { Fragment } from 'react';
-import { Row, Col } from 'antd';
+import { Col } from 'antd';
 
 import * as S from './styles';
 
 // Common
 import Container from '../../common/Container';
-import SvgIcon from '../../common/SvgIcon';
-import Link from 'next/link'
 import FooterSocial from '../layout/partials/FooterSocial';
 import Logo from '../layout/partials/DeltaLogo';
 import styled from 'styled-components';
+import { useWindowSize } from '../../utils/useWindowSize';
 
 const FlexContainer = styled.div`
 display: flex;
@@ -44,57 +43,33 @@ width: 400px;
 
 
 const Footer = ({ t }) => {
-  const SocialLink = ({ href, src }) => {
-    return (
-      <Link
-        href={href}
-        target='_blank'
-        rel='noopener noreferrer'
-        key={src}
-        aria-label={src}
-        style={{ padding: 2 }}
-      >
-        <SvgIcon src={src} width='25px' height='25px' />
-      </Link>
-    );
-  };
+  const windowSize = useWindowSize()
+
+  const isMobile = windowSize.width < 450
+
 
   return (
     <Fragment>
       <S.Footer>
-        <Container style={{ width: '100%', maxWidth: '600px', display:'flex', flexDirection:'row', justifyContent:'center',alignItems:'center' }}>
+        <Container style={{ width: '100%', maxWidth: '600px', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
           <FlexContainer>
-          <FlexFloatContainer>
-            <FlexFloat>
-              <Logo />
-              {/* <S.Language>1Delta DAO</S.Language> */}
-              <S.Para>
-                ® 2023 1Delta DAO
-                <br />
-                All Rights Reserved
-              </S.Para>
-            </FlexFloat>
+            <FlexFloatContainer>
+              <FlexFloat>
+                <Logo />
+                {/* <S.Language>1Delta DAO</S.Language> */}
+                <S.Para>
+                  ® 2023 1Delta DAO
+                  <br />
+                  All Rights Reserved
+                </S.Para>
+              </FlexFloat>
             </FlexFloatContainer>
-            <Col lg={8} md={8} sm={12} xs={24}>
+            <Col lg={8} md={8} sm={12} xs={24} style={{ marginTop: isMobile && '20px' }}>
               <FooterSocial />
             </Col>
           </FlexContainer>
         </Container>
       </S.Footer>
-      {/* <S.Extra>
-        <Container border='true'>
-          <Row
-            type='flex'
-            justify='space-between'
-            align='left'
-            style={{ paddingTop: '3rem' }}
-          >
-            <S.FooterContainer>
-
-            </S.FooterContainer>
-          </Row>
-        </Container>
-      </S.Extra> */}
     </Fragment>
   );
 };

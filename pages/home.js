@@ -1,14 +1,7 @@
 import GlobalStyles from '../components/GlobalStyles';
-
-// Page components
-// import Footer from '../components/Footer';
-// import path from 'path';
-// import dotenv from 'dotenv';
-// Block Components
 import ContentBlock from '../components/ContentBlock';
 import  { CtaMiddleBlock, HeaderMiddleBlock, MiddleBlockWithTiles } from '../components/MiddleBlock';
 import DeltaHeader from '../components/layout/Header';
-// Common
 import { BackgroundNoodle } from '../components/Containers';
 import Footer from '../components/Footer';
 import NoodleSceneBg from '../components/scene/NoodleSceneBg';

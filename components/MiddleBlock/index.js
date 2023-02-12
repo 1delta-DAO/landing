@@ -13,7 +13,7 @@ import { useRef, useState } from 'react';
 import { useOutsideAlerter } from '../../utils/outsideAlerter';
 import styled from 'styled-components';
 
-const TxtBlock=styled.div`
+const TxtBlock = styled.div`
 display: flex;
 flex-direction: row;
 align-items: center;
@@ -60,7 +60,7 @@ export const HeaderMiddleBlock = () => {
       <Row type='flex' justify='center' align='middle'>
         <S.ContentWrapper>
           <Col lg={24} md={24} sm={24} xs={24}>
-            <Title>The <PrimaryLight style={{fontWeight:'bold'}}>1Delta</PrimaryLight> Protocol</Title>
+            <Title>The <PrimaryLight style={{ fontWeight: 'bold' }}>1Delta</PrimaryLight> Protocol</Title>
             <S.ContentDiv>
 
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', fontSize }}>
@@ -375,7 +375,7 @@ function ModalContent(props) {
           </FormCol>
           <div className="row" style={{ marginTop: '20px' }}>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-              <label htmlFor="message" style={{textAlign:'left'}}>Your message to us:</label>
+              <label htmlFor="message" style={{ textAlign: 'left' }}>Your message to us:</label>
               <textarea
                 className="form-input"
                 type="text"
@@ -454,7 +454,7 @@ export const CtaMiddleBlock = () => {
             {ModalContent({ ref })}
           </Modal>
           <div>
-            <h3 >
+            <h3 style={{ fontWeight: 'bold' }} >
               Get in touch
             </h3>
             <p >
@@ -468,12 +468,6 @@ export const CtaMiddleBlock = () => {
             <ButtonLight onClick={() => setShowModal(true)} style={{ width: '200px', height: '40px', fontWeight: 'bold' }}>
               Contact Us!
             </ButtonLight>
-            {/* <Input id="newsletter" type="email" label="Subscribe" labelHidden hasIcon="right" placeholder="Your email"
-              style={{ backgroundColor: '#DEE1FF' }}>
-              <svg width="16" height="12" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 5H1c-.6 0-1 .4-1 1s.4 1 1 1h8v5l7-6-7-6v5z" fill="#8C0F49" />
-              </svg>
-            </Input> */}
           </div>
         </S.ContentWrapper>
       </Row>
