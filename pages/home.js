@@ -1,22 +1,17 @@
 import GlobalStyles from '../components/GlobalStyles';
 
 // Page components
-import Header from '../components/Header';
 // import Footer from '../components/Footer';
 // import path from 'path';
 // import dotenv from 'dotenv';
 // Block Components
 import ContentBlock from '../components/ContentBlock';
-import MiddleBlock, { CtaMiddleBlock, HeaderMiddleBlock, MiddleBlockWithTiles } from '../components/MiddleBlock';
+import  { CtaMiddleBlock, HeaderMiddleBlock, MiddleBlockWithTiles } from '../components/MiddleBlock';
 import DeltaHeader from '../components/layout/Header';
 // Common
-import { BackgroundNoodle, BackgroundTriangle } from '../components/Containers';
-// import Triangles from '../components/scene/Triangles';
+import { BackgroundNoodle } from '../components/Containers';
 import Footer from '../components/Footer';
-import { useState } from 'react';
-import { ButtonLight, ButtonWhite } from '../components/Buttons';
 import NoodleSceneBg from '../components/scene/NoodleSceneBg';
-// dotenv.config({ path: path.join(__dirname, '../.env') });
 
 
 const Home = () => {
@@ -27,6 +22,7 @@ const Home = () => {
       </BackgroundNoodle>
 
       <GlobalStyles />
+      
       <DeltaHeader />
 
       <HeaderMiddleBlock />

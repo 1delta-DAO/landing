@@ -1,23 +1,8 @@
-import GlobalStyles from '../components/GlobalStyles';
-
-// Page components
-import Header from '../components/Header';
-// import Footer from '../components/Footer';
-// import path from 'path';
-// import dotenv from 'dotenv';
-// Block Components
-import ContentBlock from '../components/ContentBlock';
-import MiddleBlock, { CtaMiddleBlock, HeaderMiddleBlock, MiddleBlockWithTiles } from '../components/MiddleBlock';
-import DeltaHeader from '../components/layout/Header';
 // Common
-import { BackgroundNoodle, BackgroundTriangle } from '../components/Containers';
-// import Triangles from '../components/scene/Triangles';
-import Footer from '../components/Footer';
+import { BackgroundNoodle } from '../components/Containers';
 import NoodleScene from '../components/scene/NoodleScene';
-import { useState } from 'react';
-import { ButtonLight, ButtonWhite } from '../components/Buttons';
+import { ButtonToAppLarge, ButtonWhite } from '../components/Buttons';
 import Link from 'next/link';
-// dotenv.config({ path: path.join(__dirname, '../.env') });
 
 
 const Home = () => {
@@ -27,11 +12,29 @@ const Home = () => {
         <NoodleScene inForeground />
       </BackgroundNoodle>
 
-      <ButtonWhite style={{ width: '200px', height: '50px', position: 'absolute', left: '45%', bottom: '10%' }}>
-        <Link href={"/home"}>
-          Learn More
-        </Link>
-      </ButtonWhite> :
+      <div style={{ position: 'absolute', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '40px', top: '0%',
+        background: 'rgba(0, 0, 0, 0.15)',
+        backdropFilter: 'blur(10px)',
+    }}>
+        <ButtonToAppLarge style={{ width: '220px', height: '40px' }} >
+          <Link href={"https://app.1delta.io/"} >
+            Directly to App
+          </Link>
+        </ButtonToAppLarge>
+
+      </div>
+
+      <div style={{ position: 'absolute', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '50px', bottom: '0%',
+            background: 'rgba(255, 255, 255, 0.36)',
+            backdropFilter: 'blur(10px)',
+    }}>
+        <ButtonWhite style={{ width: '200px', height: '50px' }} >
+          <Link href={"/home"}>
+            Learn More
+          </Link>
+        </ButtonWhite>
+
+      </div>
     </>
   );
 };

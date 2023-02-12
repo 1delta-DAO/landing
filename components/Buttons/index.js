@@ -17,21 +17,41 @@ export const ButtonLight = styled.button`
 
 `
 
-
 export const ButtonWhite = styled.button`
 	border-radius: 24px;
 	font-weight: bold;
 	font-size: 25px;
 	color:${generalColors.primaryLight};
-	background: rgba(180, 180, 180, 0.5);
+	background: transparent;
 	border: none;
-	box-shadow: inset 0 0 15px white;
+	// box-shadow: inset 0 0 15px white;
 	// filter: drop-shadow(2px 5px 3px rgb(0 0 0 / 0.4));
     &:hover {
 		filter: drop-shadow(5px 7px 3px rgb(0 0 0 / 0.4));
-		background: white;
+		// background: white;
 		font-size: 27px;
 		// box-shadow: inset 0 0 40px skyblue;
+		cursor: pointer;
+    }
+
+`
+
+export const ButtonToAppLarge = styled.button`
+	border-radius: 24px;
+	font-weight: bold;
+	font-size: 20px;
+	color: white;
+	background: none;
+	transition: all 0.1s ease-in;
+	border: none;
+	// box-shadow: inset 0 0 15px white;
+	// filter: drop-shadow(2px 5px 3px rgb(0 0 0 / 0.4));
+    &:hover {
+		filter: drop-shadow(5px 7px 3px rgb(0 0 0 / 0.4));
+		// background: ${generalColors.primaryLight};
+		font-size: 22px;
+		// box-shadow: inset 0 0 40px skyblue;
+		box-shadow: none;
 		cursor: pointer;
     }
 
