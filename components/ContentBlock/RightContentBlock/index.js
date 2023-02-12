@@ -21,7 +21,7 @@ const RightBlock = ({ title, content, button, icon, t, id }) => {
     <S.RightBlockContainer>
       <Row type='flex' justify='space-between' align='middle' id={id}>
         <Col lg={11} md={11} sm={11} xs={24}>
-          <Slide left>
+          <Slide left triggerOnce>
             <S.ContentWrapper style={{ padding: '50px', marginBottom: isMobile ? '-25px' : '0px' }}>
               <h6 style={{ fontWeight: 'bold', lineHeight: '40px' }}>{title}</h6>
               <S.Content>{content}</S.Content>
@@ -45,7 +45,7 @@ const RightBlock = ({ title, content, button, icon, t, id }) => {
           </Slide>
         </Col>
         <Col lg={11} md={11} sm={12} xs={24}>
-          <Slide right>
+          <Slide right triggerOnce>
             <SvgIcon
               src={icon}
               className='about-block-image'

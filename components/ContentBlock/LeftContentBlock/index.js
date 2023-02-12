@@ -14,7 +14,7 @@ const LeftContentBlock = ({ icon, title, content, section, t, id }) => {
     <S.LefttBlockContainer>
       <Row type='flex' justify='space-between' align='middle' id={id}>
         <Col lg={11} md={11} sm={12} xs={24}>
-          <Slide left overflowY>
+          <Slide left triggerOnce>
             <SvgIcon
               src={icon}
               className='about-block-image'
@@ -25,7 +25,7 @@ const LeftContentBlock = ({ icon, title, content, section, t, id }) => {
           </Slide>
         </Col>
         <Col lg={11} md={11} sm={11} xs={24}>
-          <Slide right>
+          <Slide right triggerOnce>
             <S.ContentWrapper style={{ padding: '50px', marginTop: isMobile ? '-25px' : '0px' }}>
               <h6 style={{ fontWeight: 'bold', lineHeight: '40px' }}>{title}</h6>
               <S.Content style={{
