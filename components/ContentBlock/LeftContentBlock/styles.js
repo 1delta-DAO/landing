@@ -8,8 +8,9 @@ export const LefttBlockContainer = styled.section`
   @media only screen and (max-width: 768px) {
     padding: 4rem 0 4rem;
   }
-  @media (max-width: 450px) {
+  @media screen and (max-width: 450px) {
     width: 100%;
+    overflow-y: hidden;
   }
 `;
 
