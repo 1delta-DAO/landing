@@ -7,7 +7,7 @@ import Noodles from './Noodles'
 
 export default function NoodleSceneBg() {
     return (
-        <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 10], fov: 22 }} shadows>
+        <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 10], fov: 22 }} resize={{ scroll: false }} >
             <Bg />
             <Suspense fallback={null}>
                 <Noodles />
