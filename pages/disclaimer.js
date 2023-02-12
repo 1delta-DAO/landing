@@ -16,7 +16,7 @@ const Disclaimer = () => {
   };
 
   return (
-    <>
+    <section style={{ overflowY: 'hidden' }}>
       <BackgroundNoodle>
         <NoodleSceneBg />
       </BackgroundNoodle>
@@ -160,7 +160,7 @@ const Disclaimer = () => {
         </div>
         <Footer />
       </section>
-    </>
+    </section>
   );
 }
 

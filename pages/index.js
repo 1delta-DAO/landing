@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const Home = () => {
   return (
-    <>
+    <section style={{overflow: 'hidden'}}>
       <BackgroundNoodle isFocused>
         <NoodleScene inForeground />
       </BackgroundNoodle>
@@ -35,7 +35,7 @@ const Home = () => {
         </ButtonWhite>
 
       </div>
-    </>
+    </section>
   );
 };
 

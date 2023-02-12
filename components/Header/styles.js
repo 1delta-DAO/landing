@@ -67,6 +67,7 @@ export const SiteHeader = styled.header`
 	z-index: 1001 !important;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.31);
   transition: all .2s ease-in;
+  -webkit-backdrop-filter: blur(10px);
   ${({ menuActive }) => !menuActive && `
   height: 230px;
   `}
@@ -79,7 +80,7 @@ export const SiteHeaderFlyout = styled.div`
 	width: 100%;
   height:0;
 	z-index: 1001 !important;
-  blur(10px)
+  -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.31);
   margin-top: -90px;
   ${({ isActive }) => isActive && `

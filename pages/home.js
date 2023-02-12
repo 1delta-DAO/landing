@@ -16,13 +16,13 @@ import NoodleSceneBg from '../components/scene/NoodleSceneBg';
 
 const Home = () => {
   return (
-    <>
+    <section style={{overflowY:'hidden'}}>
       <BackgroundNoodle isFocused={false}>
         <NoodleSceneBg />
       </BackgroundNoodle>
 
       <GlobalStyles />
-      
+
       <DeltaHeader />
 
       <HeaderMiddleBlock />
@@ -65,7 +65,7 @@ const Home = () => {
 
       <CtaMiddleBlock />
       <Footer />
-    </>
+    </section>
   );
 };
 
