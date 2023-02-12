@@ -16,10 +16,11 @@ width: 100%;
 `
 
 export const NavContainer = styled.div`
+display: flex;
    @media (max-width: 412px) {
 	display: flex;
-	align-items: center;
-    justify-content: center;
+	justify-content: space-between;
+	align-items: space-between;
   }
 `
 

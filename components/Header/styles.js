@@ -105,7 +105,7 @@ export const SiteHeaderInner = styled.header`
   justify-content: space-between;
   align-items: center;
   height: ${headerHeightMobile};
-     @media (max-width: 415px) {
+     @media (max-width: 450px) {
     width: 100%;
     align-items: space-between;
     padding: 5px;

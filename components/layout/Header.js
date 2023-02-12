@@ -14,10 +14,10 @@ import { AlignJustify, Menu } from 'react-feather';
 import { useOutsideAlerter } from '../../utils/outsideAlerter';
 
 
-const HeaderText = styled.ul`
+const HeaderText = styled.div`
 font-size: ${({ isSelected }) => isSelected ? '20px' : '16px'};
 ${({ isSelected }) => isSelected ? 'margin-bottom: 5px;' : ''}
-   @media (max-width: 412px) {
+   @media (max-width: 450px) {
     display: flex;
     align-items: center;;
     justify-content: center;
@@ -29,9 +29,10 @@ const HeaderContainer = styled.div`
   flex-direction: row;
   max-width: 100%;
   position: relative;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  @media (max-width: 412px) {
+  width: 400px;
+  @media (max-width: 450px) {
     width: 400px;
     justify-content: center;
   }
@@ -115,7 +116,7 @@ const Header = ({
   const windowSize = useWindowSize()
 
   const isMobile = windowSize.width < 450
-  console.log("isMobile", isMobile)
+
   useEffect(() => {
     isActive && openMenu();
     document.addEventListener('keydown', keyPress);
@@ -180,43 +181,37 @@ const Header = ({
                 {isHome ? 'Home' : 'Disclaimer'}
               </HeaderTextStan>
             </NavContainer> :
-            <NavContainer>
-              <HeaderContainer>
-                <HeaderText isSelected={isHome}>
-                  <Link href="/home" onClick={closeMenu}>
-                    <div className={isHome ? 'text-color-bright-avg-hover-selected' : 'text-color-bright-avg-hover'}>
-                      Home
-                    </div>
-                  </Link>
-                </HeaderText>
-                <HeaderText isSelected={isDisclaimer}>
-                  <Link href="/disclaimer" onClick={closeMenu}>
-                    <div className={isDisclaimer ? 'text-color-bright-avg-hover-selected' : 'text-color-bright-avg-hover'}>
-                      Disclaimer
-                    </div>
-                  </Link>
-                </HeaderText>
-                <HeaderText isSelected={false}>
-                  <Link target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1Jop2_k7edf7l_ESYV-T-BakzlO_pCGux/view?usp=share_link" onClick={closeMenu}><div className='text-color-bright-avg-hover'>Whitepaper</div></Link>
-                </HeaderText>
+            <HeaderContainer style={{ marginLeft: '30px' }}>
+              <HeaderText isSelected={isHome}>
+                <Link href="/home" onClick={closeMenu}>
+                  Home
+                </Link>
+              </HeaderText>
+              <HeaderText isSelected={isDisclaimer}>
+                <Link href="/disclaimer" onClick={closeMenu}>
+                  Disclaimer
+                </Link>
+              </HeaderText>
+              <HeaderText isSelected={false}>
+                <Link target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1Jop2_k7edf7l_ESYV-T-BakzlO_pCGux/view?usp=share_link" onClick={closeMenu}>
+                  Whitepaper
+                </Link>
+              </HeaderText>
 
-                <ul
-                  className="list-reset header-nav-right"
-                >
-                  <ButtonLightTop
-                    tag='a'
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://app.1delta.io/"
-                    onClick={closeMenu}>
-                    <Link href={"https://app.1delta.io/"} style={{ color: 'white' }}>
-                      Go to App
-                    </Link>
-                  </ButtonLightTop>
-                </ul>
+              <ButtonLightTop
+                style={{ height: '30px' }}
+                tag='a'
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://app.1delta.io/"
+                onClick={closeMenu}>
+                <Link href={"https://app.1delta.io/"} style={{ color: 'white', fontWeight: 'bold' }}>
+                  Go to App
+                </Link>
+              </ButtonLightTop>
 
-              </HeaderContainer>
-            </NavContainer>}
+            </HeaderContainer>
+          }
           {isMobile && <> <Menu style={{ marginRight: '10px' }} onClick={() => setShowMenu(true)} />
             {showMenu && <div
               ref={ref}
@@ -229,21 +224,18 @@ const Header = ({
                 width: '100%',
                 position: 'absolute',
                 top: '90px',
-                height: '120px'
+                height: '120px',
+                padding:'0px'
               }}
             >
               {!isHome && <HeaderTextCenter isSelected={isHome}>
                 <Link href="/home" onClick={closeMenu}>
-                  <div className={isHome ? 'text-color-bright-avg-hover-selected' : 'text-color-bright-avg-hover'}>
-                    Home
-                  </div>
+                  Home
                 </Link>
               </HeaderTextCenter>}
               {!isDisclaimer && <HeaderTextCenter isSelected={isDisclaimer}>
                 <Link href="/disclaimer" onClick={closeMenu}>
-                  <div className={isDisclaimer ? 'text-color-bright-avg-hover-selected' : 'text-color-bright-avg-hover'}>
-                    Disclaimer
-                  </div>
+                  Disclaimer
                 </Link>
               </HeaderTextCenter>}
               <HeaderTextCenter isSelected={false}>
