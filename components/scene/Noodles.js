@@ -11,7 +11,7 @@ import { LayerMaterial, Depth, Fresnel, Noise } from 'lamina/vanilla'
 const colorA = new THREE.Color('white').convertSRGBToLinear()
 const colorB = new THREE.Color('black').convertSRGBToLinear()
 const fresnel = new THREE.Color('white').convertSRGBToLinear()
-const material = useMemo(() => new LayerMaterial({
+const material = new LayerMaterial({
   layers: [
     // new Base({ color: colorA }),
     new Depth({ colorA: colorA, colorB: colorB, alpha: 0.5, mode: 'normal', near: 0, far: 2, origin: [1, 1, 1] }),
@@ -22,7 +22,7 @@ const material = useMemo(() => new LayerMaterial({
 
     // new Noise({ mapping: 'local', type: 'simplex', scale: 1000, colorA: '#ffaf40', colorB: 'black', mode: 'overlay' })
   ]
-}), [])
+})
 
 function Noodle() {
   const { viewport, camera } = useThree()
@@ -34,12 +34,12 @@ function Noodle() {
     const bounds = viewport.getCurrentViewport(camera, [0, 0, z])
     return [THREE.MathUtils.randFloatSpread(bounds.width), THREE.MathUtils.randFloatSpread(bounds.height * 0.75), z]
   }, [viewport])
-  return (
+  return useMemo(()=>(
     <Float position={position} speed={speed} rotationIntensity={10} floatIntensity={40} dispose={null} castShadow>
-      <mesh scale={(Math.max(viewport.width + viewport.height)) / 1.5} geometry={geometry} material={material} castShadow />
+      <mesh scale={(Math.max(viewport.width + viewport.height)) /1.5} geometry={geometry} material={material} castShadow /> 
       {/* // scale=5 originally */}
     </Float>
-  )
+  ),[])
 }
 
 export default function Noodles() {
