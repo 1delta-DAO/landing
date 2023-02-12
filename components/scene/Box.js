@@ -3,6 +3,19 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import { Environment, OrbitControls } from "@react-three/drei"
 import background from './../../assets/images/tetrahedron-bg.svg';
+import styled from 'styled-components';
+
+
+const BoxContainer = styled.div`
+border-radius: 100px; background-image: url(${background}); 
+background-size: contain;
+width: 70px;
+height: 70px;
+@media (max-width: 412px) {
+    width: 50px;
+    height: 50px;
+  }
+`
 
 function Box(props) {
 
@@ -65,8 +78,8 @@ export default function BoxScene(props) {
     return <div>
         {loaded ?
             (
-                <div style={{ borderRadius: '100px', backgroundImage: `url(${background})`, width: props.width, height: props.height, backgroundSize: 'contain' }} >
-                    <Canvas style={{ padding: '0px', margin: '0px', width: props.width, height: props.height }} background={`url(${background})`}>
+                <BoxContainer >
+                    <Canvas style={{ padding: '0px', margin: '0px' }} background={`url(${background})`}>
                         <perspectiveCamera position={[0, 0, 0.1]} fov={50} aspect={1} />
                         <ambientLight posi />
                         <pointLight position={[2, -2, 10]} intensity={6} color={'white'} />
@@ -74,7 +87,7 @@ export default function BoxScene(props) {
                         <Box2 position={[0, 0, 0]} />
                         <Environment preset="city" />
                     </Canvas>
-                </div>
+                </BoxContainer>
             ) : null
         }
     </div>

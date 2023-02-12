@@ -4,16 +4,19 @@ import classNames from 'classnames';
 import Link from 'next/link'
 import { useRouter } from "next/router";
 import BoxScene from '../scene/Box';
-import { Hamburger, HamburgerInner, HeaderNavToggle, ScreenReader, SiteHeader, SiteHeaderInner } from '../Header/styles';
+import { Hamburger, HamburgerInner, HeaderNavToggle, ScreenReader, SiteHeader, SiteHeaderFlyout, SiteHeaderInner } from '../Header/styles';
 import { NavContainer } from '../Containers';
 import { ListItem } from '../Text';
 import { ButtonLight, ButtonLightTop } from '../Buttons';
 import styled from 'styled-components';
+import { useWindowSize } from '../../utils/useWindowSize';
+import { AlignJustify, Menu } from 'react-feather';
+import { useOutsideAlerter } from '../../utils/outsideAlerter';
 
 
 const HeaderText = styled.ul`
-font-size: ${props => props.isSelected ? '20px' : '16px'};
-${props => props.isSelected ? 'margin-bottom: 5px;' : ''}
+font-size: ${({ isSelected }) => isSelected ? '20px' : '16px'};
+${({ isSelected }) => isSelected ? 'margin-bottom: 5px;' : ''}
    @media (max-width: 412px) {
     display: flex;
     align-items: center;;
@@ -42,6 +45,27 @@ flex-direction: row;
   margin-left: 5px;
 }
 `
+
+const HeaderTextSelected = styled.div`
+color: color(bright-avg);
+font-size: 25px;
+-moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+  `
+
+
+const HeaderTextStan = styled.div`
+  color: color(bright-avg);
+	-moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+	&:hover {
+        color: color(bright-primary);
+    }
+  `
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -75,6 +99,10 @@ const Header = ({
   const nav = useRef(null);
   const hamburger = useRef(null);
 
+  const windowSize = useWindowSize()
+
+  const isMobile = windowSize.width < 450
+  console.log("isMobile", isMobile)
   useEffect(() => {
     isActive && openMenu();
     document.addEventListener('keydown', keyPress);
@@ -109,16 +137,14 @@ const Header = ({
     closeMenu();
   }
 
-  const [color, setColor] = useState('black')
-
-  const [colorSet, setColorSet] = useState(true)
-
-  useEffect(() => setColorSet(false), [])
-
-
   const [isHome, isDisclaimer] = useMemo(() => {
-    return [location === '/', location.includes('disclaimer')]
+    return [location.includes('home'), location.includes('disclaimer')]
   }, [location])
+
+  const [showMenu, setShowMenu] = useState(false)
+
+  const ref = useRef(null)
+  useOutsideAlerter(ref, () => setShowMenu(false))
 
   return (
     <SiteHeader
@@ -136,7 +162,7 @@ const Header = ({
           {/* <ContainerTriangles >
             <Triangles />
           </ContainerTriangles> */}
-          {!hideNav &&
+          {!isMobile &&
             <NavContainer>
               <HeaderNavToggle
                 ref={hamburger}
@@ -179,15 +205,31 @@ const Header = ({
                       rel="noopener noreferrer"
                       href="https://app.1delta.io/"
                       onClick={closeMenu}>
-                      <Link href={"https://app.1delta.io/"} style={{color:'white'}}>
+                      <Link href={"https://app.1delta.io/"} style={{ color: 'white' }}>
                         Go to App
                       </Link>
                     </ButtonLightTop>
                   </ul>
                 }
               </HeaderContainer>
-              {/* </NavContainerInternal> */}
             </NavContainer>}
+          {isMobile && <> <Menu style={{ marginRight: '10px' }} onClick={() => setShowMenu(true)} />
+
+
+            {showMenu && <SiteHeaderFlyout
+              ref={ref}
+              isActive={showMenu}
+              style={{
+                background: 'rgba(255, 255, 255, 0.36)',
+                backdropFilter: 'blur(10px)',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              Hello
+            </SiteHeaderFlyout>
+            }
+          </>}
         </SiteHeaderInner>
       </div>
     </SiteHeader >

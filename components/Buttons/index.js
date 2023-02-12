@@ -7,7 +7,7 @@ export const ButtonLight = styled.button`
 	color: ${buttonColor.buttonBright};
     background-color: ${buttonColor.buttonPrimary};
 	border-color: ${borderColor.dividerInverse};
-
+	backdrop-filter: blur(10px);
     &:hover {
         background-color: ${generalColors.brightIntense};
 		border-color: ${borderColor.dividerInverse};
@@ -21,20 +21,42 @@ export const ButtonLight = styled.button`
 export const ButtonWhite = styled.button`
 	border-radius: 24px;
 	font-weight: bold;
-	font-size: 40px;
-	text-color:${generalColors.primaryLight}
-	background: white;
-	stroke: white;
+	font-size: 25px;
+	color:${generalColors.primaryLight};
+	background: rgba(180, 180, 180, 0.5);
 	border: none;
-	box-shadow: inset 0 0 10px black;
-	filter: drop-shadow(2px 5px 3px rgb(0 0 0 / 0.4));
+	box-shadow: inset 0 0 15px white;
+	// filter: drop-shadow(2px 5px 3px rgb(0 0 0 / 0.4));
     &:hover {
 		filter: drop-shadow(5px 7px 3px rgb(0 0 0 / 0.4));
-		box-shadow: inset 0 0 40px skyblue;
+		background: white;
+		font-size: 27px;
+		// box-shadow: inset 0 0 40px skyblue;
 		cursor: pointer;
     }
 
 `
+
+
+export const ButtonLinkWhite = styled.a`
+	border-radius: 24px;
+	font-weight: bold;
+	font-size: 25px;
+	color:${generalColors.primaryLight};
+	background: rgba(180, 180, 180, 0.5);
+	border: none;
+	box-shadow: inset 0 0 15px white;
+	// filter: drop-shadow(2px 5px 3px rgb(0 0 0 / 0.4));
+    &:hover {
+		filter: drop-shadow(5px 7px 3px rgb(0 0 0 / 0.4));
+		background: white;
+		font-size: 27px;
+		// box-shadow: inset 0 0 40px skyblue;
+		cursor: pointer;
+    }
+
+`
+
 
 
 export const ButtonLightTop = styled.button`

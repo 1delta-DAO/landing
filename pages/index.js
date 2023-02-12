@@ -16,72 +16,22 @@ import Footer from '../components/Footer';
 import NoodleScene from '../components/scene/NoodleScene';
 import { useState } from 'react';
 import { ButtonLight, ButtonWhite } from '../components/Buttons';
+import Link from 'next/link';
 // dotenv.config({ path: path.join(__dirname, '../.env') });
 
 
 const Home = () => {
-  const [learnMore, setLearnMore] = useState(false)
   return (
     <>
-      {/* <BackgroundTriangle>
-        <Triangles />
-      </BackgroundTriangle> */}
-
-      <BackgroundNoodle isFocused={!learnMore}>
-        <NoodleScene inForeground={!learnMore} />
+      <BackgroundNoodle isFocused>
+        <NoodleScene inForeground />
       </BackgroundNoodle>
-      {!learnMore ?
-        <ButtonWhite onClick={() => setLearnMore(true)} style={{ width: '200px', height: '50px', position: 'absolute', left: '45%', bottom: '10%', fontSize: '25px' }}>
+
+      <ButtonWhite style={{ width: '200px', height: '50px', position: 'absolute', left: '45%', bottom: '10%' }}>
+        <Link href={"/home"}>
           Learn More
-        </ButtonWhite> :
-
-        <>
-          <GlobalStyles />
-          <DeltaHeader />
-
-          <HeaderMiddleBlock />
-
-
-          <MiddleBlockWithTiles
-            title='Unified trading experience'
-            content='No more switching between multiple web apps to manage your leveraged positions. 1Delta was built by traders with the goal of creating the best possible decentralized trading experience.'
-
-          />
-
-          <ContentBlock
-            type='right'
-            first='false'
-            title='Manage your risk'
-            content='The app gives you a full overview of your risk parameters. You can immediately see if you are at risk of liquidation so that you can take action.'
-            button='button'
-            icon='trim-panel.png'
-            id='intro'
-          />
-
-          <ContentBlock
-            type='left'
-            first='false'
-            title='Take on smart leverage'
-            content='Features like one-click self-liquidation and health indicators ensure that you can safely leverage your positions to get the most out of your trades.'
-            button='button'
-            icon='top-panel.png'
-            id='intro'
-          />
-
-          <ContentBlock
-            type='right'
-            first='false'
-            title='Complexity reduced down to a single click'
-            content='We unite the best of both worlds. Flash swaps allow you to execute collateral and debt swaps in a single click. You can also easily assess the impact of a trade on your account health before you execute.'
-            button='button'
-            icon='full-panel.png'
-            id='intro'
-          />
-
-          <CtaMiddleBlock />
-          <Footer />
-        </>
-      }
+        </Link>
+      </ButtonWhite> :
     </>
   );
 };

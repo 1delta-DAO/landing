@@ -21,7 +21,6 @@ export const NavContainer = styled.div`
 	align-items: center;
     justify-content: center;
   }
-
 `
 
 export const BackgroundTriangle = styled.div`
@@ -34,10 +33,9 @@ export const BackgroundTriangle = styled.div`
 export const BackgroundNoodle = styled.div`
 	height:100%;
 	position: fixed;
-	opacity: ${({ isFocused }) => isFocused ? 1 : 0.2};
+	opacity: ${({ isFocused }) => isFocused ? 1 : 0.3};
 	width: 100%;
 `
-
 
 export const TilesContainer = styled.div`
 	align-items: center;
@@ -50,7 +48,6 @@ export const TilesContainer = styled.div`
 `
 
 export const tilesItemWidth = '330px';
-
 export const tilesItemsPadding__mobile = 24;		// padding between tiles (mobile)
 export const tilesItemsPadding__desktop = null;		// padding between tiles (desktop)
 export const tilesItemInnerPadding_v = '32px';		// tile item, inner top and bottom padding
@@ -68,17 +65,17 @@ padding: ${tilesItemsPadding__mobile * 0.5}px;
 `
 
 export const TileContent = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-height: 300px;
-max-height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 300px;
+	max-height: 300px;
 `
 
 export const TileHeader = styled.div`
-font-size: 25px;
-text-align: center;
+	font-size: 25px;
+	text-align: center;
 `
 
 export const FeaturesTilesItemImage = styled.div`
@@ -92,8 +89,8 @@ export const FeaturesTilesItemImage = styled.div`
 `
 
 export const OverlappingImageContainer = styled.div`
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 `
