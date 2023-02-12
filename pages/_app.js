@@ -22,6 +22,8 @@ function MyApp({ Component, pageProps }) {
       </Script>
 
       <Head>
+        <link rel="shortcut icon" href="/img/favicon.ico" />
+        <link rel="icon" type="image/ico" sizes="16x16" href="/images/faviconz.ico" />
         <meta charSet='utf-8' />
         <meta httpEquiv='x-ua-compatible' content='ie=edge' />
         <meta
