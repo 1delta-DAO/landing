@@ -34,11 +34,20 @@ function MyApp({ Component, pageProps }) {
           content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5'
         />
         <meta
-          name='The 1Delta protocol'
-          content='Trade crypto on 1Delta DAO on leverage.'
+          name='description'
+          content='Swap collateral, debt or trade on margin with 1Dleta DAO - Building leverage has never been easier in crypto.'
         />{' '}
         <meta name='keywords' content='decentralized crypto leverage margin broker polygon uniswap dex compound 0vix' />
         <meta property='og:title' content='1Delta DAO - The decentralized crypto margin broker.' key='title' />
+        <meta
+          property="og:image"
+          content="https://www.1delta.io/img/favicon.png"
+        />
+
+        <meta
+          property="og:description"
+          content="Swap collateral, debt or trade on margin with 1Dleta DAO - Building leverage has never been easier in crypto."
+        />
         <meta name='theme-color' content='#f0f6f0' />
         <title>1Delta DAO - The decentralized margin broker.</title>
       </Head>

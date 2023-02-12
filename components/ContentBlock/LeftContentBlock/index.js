@@ -28,6 +28,7 @@ const LeftContentBlock = ({ icon, title, content, section, t, id }) => {
               className='about-block-image'
               width='100%'
               height='100%'
+              style={{ overflowY: 'hidden' }}
             />
           </Slide>
         </Col>
