@@ -24,6 +24,9 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <link rel='manifest' href='/manifest.json' />
         <link rel="shortcut icon" href="/img/favicon.png" />
+        <link rel="icon" href="/img/favicon.png" />
+        <link rel="apple-touch-icon" href="/img/favicon.png" />
+        <link rel="apple-touch-icon-precomposed" href="/img/favicon.png" />
         <meta charSet='utf-8' />
         <meta httpEquiv='x-ua-compatible' content='ie=edge' />
         <meta
