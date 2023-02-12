@@ -66,6 +66,10 @@ export const SiteHeader = styled.header`
 	width: 100%;
 	z-index: 1001 !important;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.31);
+  transition: all .2s ease-in;
+  ${({ menuActive }) => !menuActive && `
+  height: 230px;
+  `}
 `
 
 export const SiteHeaderFlyout = styled.div`
@@ -75,13 +79,12 @@ export const SiteHeaderFlyout = styled.div`
 	width: 100%;
   height:0;
 	z-index: 1001 !important;
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.31);
+  blur(10px)
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.31);
   margin-top: -90px;
   ${({ isActive }) => isActive && `
-  transform: translateY: 90px;
-  top:  80px;
+  margin-top:80px;
   height: 400px
-
   `}
 `
 

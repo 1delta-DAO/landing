@@ -3,6 +3,7 @@ import { BackgroundNoodle, BackgroundTriangle } from '../components/Containers';
 import Footer from '../components/Footer';
 import Header from '../components/layout/Header';
 import NoodleScene from '../components/scene/NoodleScene';
+import NoodleSceneBg from '../components/scene/NoodleSceneBg';
 import Triangles from '../components/scene/Triangles';
 import { SectionHeaderBrightAlt } from '../components/sections/partials/SectionHeader';
 
@@ -16,11 +17,8 @@ const Disclaimer = () => {
 
   return (
     <>
-      {/* <BackgroundTriangle>
-        <Triangles />
-      </BackgroundTriangle> */}
       <BackgroundNoodle>
-        <NoodleScene />
+        <NoodleSceneBg />
       </BackgroundNoodle>
       <Header />
       <section >

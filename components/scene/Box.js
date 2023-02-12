@@ -72,7 +72,7 @@ function Box2(props) {
     );
 }
 
-export default function BoxScene(props) {
+export default function BoxScene() {
     const [loaded, setLoaded] = useState(false)
     useEffect(() => setLoaded(true), [])
     return <div>

@@ -25,12 +25,13 @@ ${({ isSelected }) => isSelected ? 'margin-bottom: 5px;' : ''}
 `
 
 const HeaderContainer = styled.div`
-display: flex;
-flex-direction: row;
- max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
   position: relative;
-   justifyContent: center;
-   @media (max-width: 412px) {
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 412px) {
     width: 400px;
     justify-content: center;
   }
@@ -47,7 +48,7 @@ flex-direction: row;
 `
 
 const HeaderTextSelected = styled.div`
-color: color(bright-avg);
+color: black;
 font-size: 25px;
 -moz-transition: all .2s ease-in;
   -o-transition: all .2s ease-in;
@@ -55,9 +56,21 @@ font-size: 25px;
   transition: all .2s ease-in;
   `
 
+const HeaderTextCenter = styled.div`
+color: black;
+text-align: center;
+font-size: 20px;
+-moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+  `
+
+
 
 const HeaderTextStan = styled.div`
   color: color(bright-avg);
+  font-size: 20px;
 	-moz-transition: all .2s ease-in;
     -o-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
@@ -148,6 +161,7 @@ const Header = ({
 
   return (
     <SiteHeader
+      menuActive={!showMenu}
       style={{
         background: 'rgba(255, 255, 255, 0.36)',
         backdropFilter: 'blur(10px)',
@@ -157,29 +171,19 @@ const Header = ({
     >
       <div style={{ display: 'flex', flexDirection: 'row', maxWidth: '100%', position: 'relative', justifyContent: 'center' }} >
         <SiteHeaderInner>
-          <BoxScene height={'70px'} width={'70px'}
-          />
-          {/* <ContainerTriangles >
-            <Triangles />
-          </ContainerTriangles> */}
-          {!isMobile &&
+          <Link href="/">
+            <BoxScene />
+          </Link>
+          {isMobile ?
             <NavContainer>
-              <HeaderNavToggle
-                ref={hamburger}
-                onClick={isActive ? closeMenu : openMenu}
-              >
-                <ScreenReader>Menu</ScreenReader>
-                <Hamburger>
-                  <HamburgerInner />
-                </Hamburger>
-              </HeaderNavToggle>
-              {/* <NavContainerInternal
-                ref={nav}
-                // style={{  flexDirection: 'row', justifyContent: 'center', alignItems:'center', marginLeft: '100px' }}
-              > */}
+              <HeaderTextStan style={{ marginRight: '30px' }}>
+                {isHome ? 'Home' : 'Disclaimer'}
+              </HeaderTextStan>
+            </NavContainer> :
+            <NavContainer>
               <HeaderContainer>
                 <HeaderText isSelected={isHome}>
-                  <Link href="/" onClick={closeMenu}>
+                  <Link href="/home" onClick={closeMenu}>
                     <div className={isHome ? 'text-color-bright-avg-hover-selected' : 'text-color-bright-avg-hover'}>
                       Home
                     </div>
@@ -195,39 +199,74 @@ const Header = ({
                 <HeaderText isSelected={false}>
                   <Link target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1Jop2_k7edf7l_ESYV-T-BakzlO_pCGux/view?usp=share_link" onClick={closeMenu}><div className='text-color-bright-avg-hover'>Whitepaper</div></Link>
                 </HeaderText>
-                {!hideSignin &&
-                  <ul
-                    className="list-reset header-nav-right"
-                  >
-                    <ButtonLightTop
-                      tag='a'
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://app.1delta.io/"
-                      onClick={closeMenu}>
-                      <Link href={"https://app.1delta.io/"} style={{ color: 'white' }}>
-                        Go to App
-                      </Link>
-                    </ButtonLightTop>
-                  </ul>
-                }
+
+                <ul
+                  className="list-reset header-nav-right"
+                >
+                  <ButtonLightTop
+                    tag='a'
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://app.1delta.io/"
+                    onClick={closeMenu}>
+                    <Link href={"https://app.1delta.io/"} style={{ color: 'white' }}>
+                      Go to App
+                    </Link>
+                  </ButtonLightTop>
+                </ul>
+
               </HeaderContainer>
             </NavContainer>}
           {isMobile && <> <Menu style={{ marginRight: '10px' }} onClick={() => setShowMenu(true)} />
-
-
-            {showMenu && <SiteHeaderFlyout
+            {showMenu && <div
               ref={ref}
               isActive={showMenu}
               style={{
-                background: 'rgba(255, 255, 255, 0.36)',
-                backdropFilter: 'blur(10px)',
-                alignItems: 'center',
-                justifyContent: 'center',
+                justifyContent: 'space-between',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'space-between',
+                width: '100%',
+                position: 'absolute',
+                top: '90px',
+                height: '120px'
               }}
             >
-              Hello
-            </SiteHeaderFlyout>
+              {!isHome && <HeaderTextCenter isSelected={isHome}>
+                <Link href="/home" onClick={closeMenu}>
+                  <div className={isHome ? 'text-color-bright-avg-hover-selected' : 'text-color-bright-avg-hover'}>
+                    Home
+                  </div>
+                </Link>
+              </HeaderTextCenter>}
+              {!isDisclaimer && <HeaderTextCenter isSelected={isDisclaimer}>
+                <Link href="/disclaimer" onClick={closeMenu}>
+                  <div className={isDisclaimer ? 'text-color-bright-avg-hover-selected' : 'text-color-bright-avg-hover'}>
+                    Disclaimer
+                  </div>
+                </Link>
+              </HeaderTextCenter>}
+              <HeaderTextCenter isSelected={false}>
+                <Link target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1Jop2_k7edf7l_ESYV-T-BakzlO_pCGux/view?usp=share_link" onClick={closeMenu}>
+                  <div className='text-color-bright-avg-hover'>Whitepaper</div>
+                </Link>
+              </HeaderTextCenter>
+
+              <div style={{ width: '100%', alignItemes: 'center', justifyContent: 'center', display: 'flex' }}>
+                <ButtonLightTop
+                  style={{ width: '120px' }}
+                  tag='a'
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://app.1delta.io/"
+                  onClick={closeMenu}>
+                  <Link href={"https://app.1delta.io/"} style={{ color: 'white', fontWeight: 'bold' }}>
+                    Go to App
+                  </Link>
+                </ButtonLightTop>
+              </div>
+
+            </div>
             }
           </>}
         </SiteHeaderInner>

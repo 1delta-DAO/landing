@@ -18,14 +18,14 @@ display: flex;
 flex-direction: row;
 align-items: center;
 font-size: 20px;
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 450px) {
   flex-direction: column;
 }
 
 `
 
 const Title = styled(S.Title)`
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 450px) {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -450,7 +450,7 @@ export const CtaMiddleBlock = () => {
     <S.MiddleBlock>
       <Row type='flex' justify='center' align='middle'>
         <S.ContentWrapper>
-          <Modal show={showModal} handleClose={() => c} ref={ref} >
+          <Modal show={showModal} handleClose={() => setShowModal(false)} ref={ref} >
             {ModalContent({ ref })}
           </Modal>
           <div>
