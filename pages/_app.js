@@ -22,6 +22,7 @@ function MyApp({ Component, pageProps }) {
       </Script>
 
       <Head>
+        <link rel='manifest' href='/manifest.json' />
         <link rel="shortcut icon" href="/img/favicon.png" />
         <meta charSet='utf-8' />
         <meta httpEquiv='x-ua-compatible' content='ie=edge' />
@@ -36,7 +37,6 @@ function MyApp({ Component, pageProps }) {
         <meta name='keywords' content='Keywords' />
         <meta property='og:title' content='BonnetHood' key='title' />
         <meta name='theme-color' content='#f0f6f0' />
-        <link rel='manifest' href='/manifest.json' />
         <title>1Delta DAO - The decentralized margin broker.</title>
       </Head>
       <Component {...pageProps} />
