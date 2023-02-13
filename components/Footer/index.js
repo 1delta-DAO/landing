@@ -35,7 +35,7 @@ display: flex;
 flex-direction: column;
 align-items: flex-end;
 width: 400px;
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 450px) {
   width: 100%;
   align-items: center;
 }

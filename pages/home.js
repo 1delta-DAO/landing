@@ -57,7 +57,9 @@ const Home = () => {
       />
 
       <CtaMiddleBlock />
+
       <Footer />
+      
     </section>
   );
 };
