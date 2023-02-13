@@ -284,7 +284,7 @@ padding: 5px;
 width: 100%;
 `
 
-const AvgText= styled.div`
+const AvgText = styled.div`
 color: black;
 font-size: 16px;
 -moz-transition: all .2s ease-in;
@@ -298,10 +298,6 @@ font-size: 16px;
 color: color(red);
 `
 
-const emailKey = process.env.REACT_APP_EMAIL_KEY
-const templateKey = process.env.REACT_APP_EMAIL_TEMPLATE_KEY
-const publicKey = process.env.REACT_APP_PUBLIC_KEY
-
 function ModalContent(props) {
 
   const initialFormState = {
@@ -309,7 +305,6 @@ function ModalContent(props) {
     email: "",
     message: "",
   };
-
   const [contactData, setContactData] = useState({ ...initialFormState });
   const [success, setSuccess] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -325,28 +320,28 @@ function ModalContent(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true)
-    try{
-    emailjs
-      .sendForm(
-        emailKey,
-        templateKey,
-        e.target,
-        publicKey,
-      )
-      .then(
-        (result) => {
-          setLoading(false)
-          console.log(result.text);
-          if (result.text.toLowerCase() === 'ok')
-            setSuccess(true)
-        },
-        (error) => {
-          setLoading(false)
-          console.log(error.text);
-          setError(error.text)
-        },
-      );
-    }catch(error){
+    try {
+      emailjs
+        .sendForm(
+          process.env.REACT_APP_EMAIL_KEY,
+          process.env.REACT_APP_EMAIL_TEMPLATE_KEY,
+          e.target,
+          process.env.REACT_APP_PUBLIC_KEY,
+        )
+        .then(
+          (result) => {
+            setLoading(false)
+            console.log(result.text);
+            if (result.text.toLowerCase() === 'ok')
+              setSuccess(true)
+          },
+          (error) => {
+            setLoading(false)
+            console.log(error.text);
+            setError(error.text)
+          },
+        );
+    } catch (error) {
       setError(String(error))
       setLoading(false)
     }
