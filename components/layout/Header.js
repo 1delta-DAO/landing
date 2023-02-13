@@ -1,27 +1,30 @@
 import React, { useState, useRef, useEffect, useMemo, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import Link from 'next/link'
 import { useRouter } from "next/router";
 import BoxScene from '../scene/Box';
-import { Hamburger, HamburgerInner, HeaderNavToggle, ScreenReader, SiteHeader, SiteHeaderFlyout, SiteHeaderInner } from '../Header/styles';
+import { SiteHeader, SiteHeaderInner } from '../Header/styles';
 import { NavContainer } from '../Containers';
-import { ListItem } from '../Text';
-import { ButtonLight, ButtonLightTop } from '../Buttons';
+import { ButtonLightTop } from '../Buttons';
 import styled from 'styled-components';
 import { useWindowSize } from '../../utils/useWindowSize';
-import { AlignJustify, Menu } from 'react-feather';
+import { Menu } from 'react-feather';
 import { useOutsideAlerter } from '../../utils/outsideAlerter';
 
 
 const HeaderText = styled.div`
 font-size: ${({ isSelected }) => isSelected ? '20px' : '16px'};
-${({ isSelected }) => isSelected ? 'margin-bottom: 5px;' : ''}
+${({ isSelected }) => isSelected ? `margin-bottom: 3px;
+font-weight: bold;` : ''}
    @media (max-width: 450px) {
     display: flex;
     align-items: center;;
     justify-content: center;
   }
+	&:hover {
+    font-size: 20px;
+}
+
 `
 
 const HeaderContainer = styled.div`
@@ -37,25 +40,6 @@ const HeaderContainer = styled.div`
     justify-content: center;
   }
 `
-
-const NavContainerInternal = styled.div`
-flex-direction: row;
- justify-content: center;
- align-items:center;
- margin-left: 100px;
- @media (max-width: 412px) {
-  margin-left: 5px;
-}
-`
-
-const HeaderTextSelected = styled.div`
-color: black;
-font-size: 25px;
--moz-transition: all .2s ease-in;
-  -o-transition: all .2s ease-in;
-  -webkit-transition: all .2s ease-in;
-  transition: all .2s ease-in;
-  `
 
 const HeaderTextCenter = styled.div`
 color: black;
@@ -225,7 +209,7 @@ const Header = ({
                 position: 'absolute',
                 top: '90px',
                 height: '120px',
-                padding:'0px'
+                padding: '0px'
               }}
             >
               {!isHome && <HeaderTextCenter isSelected={isHome}>

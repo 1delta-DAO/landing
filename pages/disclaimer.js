@@ -1,6 +1,7 @@
 import React from 'react';
 import { BackgroundNoodle, BackgroundTriangle } from '../components/Containers';
 import Footer from '../components/Footer';
+import GlobalStyles from '../components/GlobalStyles';
 import Header from '../components/layout/Header';
 import NoodleScene from '../components/scene/NoodleScene';
 import NoodleSceneBg from '../components/scene/NoodleSceneBg';
@@ -20,6 +21,9 @@ const Disclaimer = () => {
       <BackgroundNoodle>
         <NoodleSceneBg />
       </BackgroundNoodle>
+
+
+      <GlobalStyles />
       <Header />
       <section >
         <div className="container-sm" style={{ width: '90%', maxWidth: '600px', margin: '0 auto' }}>
