@@ -5,9 +5,6 @@ import styled from 'styled-components';
 import { X } from 'react-feather';
 
 const ModalComponent = styled.div`
-position: fixed;
-left:40%;
-bottom:10%;
 border-radius: 20px;
 background: white;
 height: 550px;
@@ -15,7 +12,23 @@ max-width: 400px;
 z-index: 1000;
 @media (max-width: 768px) {
   width: 95%;
-  left:2.5%;
+
+}
+`
+
+const ModalContainer = styled.div`
+border-radius: 20px;
+position: fixed;
+bottom: 20%;
+background: white;
+display: flex;
+flex-direction: row;
+justify-content: center;
+aluign-items:center;
+z-index: 1000;
+bottom: 20%;
+@media (max-width: 768px) {
+  bottom: 5%;
 }
 `
 
@@ -141,52 +154,55 @@ const Modal = ({
 
   return (
     <>
-      {show && <ModalBg  />}
-      {show &&
+      {show && <ModalBg />}
+      <ModalContainer>
+        {show &&
 
-        <ModalComponent
-          {...props}
-          onClick={handleClose}
-        >
-          <div className="modal-inner" onClick={stopPropagation}>
-            {video ?
-              <div className="responsive-video">
-                {videoTag === 'iframe' ?
-                  <iframe
-                    title="video"
-                    src={video}
-                    frameBorder="0"
-                    allowFullScreen
-                  ></iframe> :
-                  <video
-                    v-else
-                    controls
-                    src={video}
-                  ></video>
-                }
-              </div> :
-              <>
-                {!closeHidden &&
-                  <Close
-                    className="modal-close"
-                    aria-label="close"
-                    onClick={handleClose}
-                  >
+          <ModalComponent
+            {...props}
+            onClick={handleClose}
+          >
+            <div className="modal-inner" onClick={stopPropagation}>
+              {video ?
+                <div className="responsive-video">
+                  {videoTag === 'iframe' ?
+                    <iframe
+                      title="video"
+                      src={video}
+                      frameBorder="0"
+                      allowFullScreen
+                    ></iframe> :
+                    <video
+                      v-else
+                      controls
+                      src={video}
+                    ></video>
+                  }
+                </div> :
+                <>
+                  {!closeHidden &&
+                    <Close
+                      className="modal-close"
+                      aria-label="close"
+                      onClick={handleClose}
+                    >
 
-                    <X />
-                  </Close>
-                }
-                <div style={{marginTop:'20px'}}>
-                  {children}
-                </div>
-              </>
-            }
-          </div>
-        </ModalComponent>
+                      <X />
+                    </Close>
+                  }
+                  <div style={{ marginTop: '20px' }}>
+                    {children}
+                  </div>
+                </>
+              }
+            </div>
+          </ModalComponent>
 
 
-      }
+        }
+      </ModalContainer>
     </>
+
   )
 }
 

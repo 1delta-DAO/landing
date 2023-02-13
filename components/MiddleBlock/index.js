@@ -1,17 +1,16 @@
 import { Row, Col } from 'antd';
-import ButtonGroup from 'antd/lib/button/button-group';
-
+import emailjs from '@emailjs/browser';
 import { ButtonLight, ButtonLightLink } from '../Buttons';
-import { FeaturesTilesItemImage, HeroContent, OverlappingImageContainer, SingleTile, TileContent, TileHeader, TilesContainer } from '../Containers';
+import { FeaturesTilesItemImage, OverlappingImageContainer, SingleTile, TileContent, TileHeader, TilesContainer } from '../Containers';
 import Image from '../elements/Image';
 import { PrimaryLight } from '../Text';
 import * as S from './styles';
 import { CheckCircle } from 'react-feather';
 import Modal from '../elements/Modal';
-import { ButtonBright } from '../Buttons';
 import { useRef, useState } from 'react';
 import { useOutsideAlerter } from '../../utils/outsideAlerter';
 import styled from 'styled-components';
+import Loading from '../elements/Loading';
 
 const TxtBlock = styled.div`
 display: flex;
@@ -285,6 +284,20 @@ padding: 5px;
 width: 100%;
 `
 
+const AvgText= styled.div`
+color: black;
+font-size: 16px;
+-moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+// text-shadow: 0.5px 0.5px 1px rgba(255, 108, 184, 0.409), 0 0 0.1em rgba(255, 108, 184, 0.409), 0 0 0.1em rgba(255, 108, 184, 0.575);
+// background: -webkit-linear-gradient(rgb(20, 0, 57), rgb(43, 43, 43), rgb(116, 116, 116));
+// -webkit-background-clip: text;
+// -webkit-text-fill-color: transparent;
+color: color(red);
+`
+
 const emailKey = process.env.REACT_APP_EMAIL_KEY
 const templateKey = process.env.REACT_APP_EMAIL_TEMPLATE_KEY
 const publicKey = process.env.REACT_APP_PUBLIC_KEY
@@ -312,6 +325,7 @@ function ModalContent(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true)
+    try{
     emailjs
       .sendForm(
         emailKey,
@@ -332,7 +346,10 @@ function ModalContent(props) {
           setError(error.text)
         },
       );
-
+    }catch(error){
+      setError(String(error))
+      setLoading(false)
+    }
     //reset the form after submission
     setContactData({ ...initialFormState });
   };
@@ -400,41 +417,35 @@ function ModalContent(props) {
       </>}
       {loading && <div
         className="container-sm"
-        style={{ display: 'flex', direction: 'column', alignItems: 'center', justifyContent: 'center', background: 'rgba(0, 0, 0, 0.5)', borderRadius: '7px', height: '120px' }}>
+        style={{ display: 'flex', direction: 'column', alignItems: 'center', justifyContent: 'center', background: 'rgba(182, 242, 255, 0.3)', borderRadius: '7px', height: '120px', width: '100%' }}>
         <div>
-          <div className="m-0 text-color-transition-avg">
+          <AvgText>
             Sending message
-          </div>
-          <div className="snippet" data-title="dot-windmill"
-            style={{ display: 'flex', flexDirection: 'center', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
-            <div className="stage"
-              style={{ display: 'flex', flexDirection: 'center', marginTop: '20px', alignItems: 'center', justifyContent: 'center' }}>
-              <div className="dot-windmill"></div>
-            </div>
-          </div>
+          </AvgText>
+          <Loading />
         </div>
       </div>}
       {!error && success && <div className="container-sm"
-        style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: 'rgba(0, 0, 0, 0.5)', borderRadius: '7px' }}
+        style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: 'rgba(209, 255, 242, 0.3)', borderRadius: '0px', width: '100%' }}
       ><br />
         <CheckCircle color='rgba(108, 255, 204, 1)' size={50} style={{ filter: 'drop-shadow(3px 5px 2px rgba(108, 255, 204, 0.5))', marginTop: '10px' }} />
         <br />
-        <div className="m-0 text-color-transition-avg">
+        <AvgText>
           Success!
-        </div>
+        </AvgText>
         <br />
-        <div className="m-0 text-color-transition-avg" style={{ textAlign: 'center', marginBottom: '10px' }}>
+        <AvgText style={{ textAlign: 'center', marginBottom: '10px' }}>
           Stay tuned - We will reply as soon as we can.
-        </div>
+        </AvgText>
         <br />
       </div>
       }
       {error && <div
         className="container-sm"
-        style={{ display: 'flex', direction: 'column', alignItems: 'center', justifyContent: 'center', background: 'rgba(0, 0, 0, 0.5)', borderRadius: '7px', height: '100px' }}>
-        <div className="m-0 text-color-transition-avg" style={{ fontSize: '14px', textAlign: 'center' }}>
+        style={{ display: 'flex', direction: 'column', alignItems: 'center', justifyContent: 'center', background: 'rgba(255, 171, 171, 0.3)', borderRadius: '0px', height: '100px', width: '100%' }}>
+        <AvgText style={{ fontSize: '14px', textAlign: 'center' }}>
           Error: {error}
-        </div>
+        </AvgText>
       </div>}
     </div>
   );
