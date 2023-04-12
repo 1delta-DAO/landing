@@ -30,7 +30,6 @@ export const ButtonWhite = styled.button`
 		filter: drop-shadow(5px 7px 3px rgb(0 0 0 / 0.4));
 		// background: white;
 		font-size: 27px;
-		// box-shadow: inset 0 0 40px skyblue;
 		cursor: pointer;
     }
 
@@ -50,7 +49,6 @@ export const ButtonToAppLarge = styled.button`
 		filter: drop-shadow(5px 7px 3px rgb(0 0 0 / 0.4));
 		// background: ${generalColors.primaryLight};
 		font-size: 22px;
-		// box-shadow: inset 0 0 40px skyblue;
 		box-shadow: none;
 		cursor: pointer;
     }

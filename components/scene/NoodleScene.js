@@ -33,7 +33,7 @@ function Caption(inForeground) {
             material-toneMapped={false}
             anchorX="center"
             anchorY="middle">
-            {`1Delta DAO`}
+            {`1delta`}
         </Text>
     )
 }
@@ -50,7 +50,7 @@ function CaptionSmall(inForeground) {
             material-toneMapped={false}
             anchorX="center"
             anchorY="middle">
-            {`\n\n\n\n\nThe decentralized\n margin broker`}
+            {`\n\n\n\n\nThe decentralized\n margin aggregator`}
         </Text>
     )
 }

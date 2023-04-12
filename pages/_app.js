@@ -35,10 +35,10 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           name='description'
-          content='Swap collateral, debt or trade on margin with 1Delta DAO - Building leverage has never been easier in crypto.'
+          content='Swap collateral, debt or trade on margin with 1delta - Building leverage has never been easier in crypto.'
         />{' '}
-        <meta name='keywords' content='decentralized crypto leverage margin broker polygon uniswap dex compound 0vix' />
-        <meta property='og:title' content='1Delta DAO - The decentralized crypto margin broker.' key='title' />
+        <meta name='keywords' content='decentralized crypto leverage margin broker polygon uniswap dex compound 0vix aave' />
+        <meta property='og:title' content='1delta - The decentralized crypto margin broker.' key='title' />
         <meta
           property="og:image"
           content="https://www.1delta.io/img/favicon.png"
@@ -46,10 +46,10 @@ function MyApp({ Component, pageProps }) {
 
         <meta
           property="og:description"
-          content="Swap collateral, debt or trade on margin with 1Delta DAO - Building leverage has never been easier in crypto."
+          content="Swap collateral, debt or trade on margin with 1delta - Building leverage has never been easier in crypto."
         />
         <meta name='theme-color' content='#f0f6f0' />
-        <title>1Delta DAO - The decentralized margin broker.</title>
+        <title>1delta | The decentralized margin aggregator</title>
       </Head>
       <Component {...pageProps} />
     </>
