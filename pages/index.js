@@ -4,7 +4,20 @@ import NoodleScene from '../components/scene/NoodleScene';
 import { ButtonToAppLarge, ButtonWhite } from '../components/Buttons';
 import Link from 'next/link';
 import { BottomBar, TopBar } from '../components/Bars';
+import styled from 'styled-components';
 
+
+const LinkTop = styled(Link)`
+&:hover {
+color: white;
+}
+`
+
+const LinkBottom = styled(Link)`
+&:hover {
+color: #C41969;
+}
+`
 
 const Home = () => {
   return (
@@ -15,18 +28,18 @@ const Home = () => {
 
       <TopBar>
         <ButtonToAppLarge style={{ width: '220px', height: '40px' }} >
-          <Link href={"https://app.1delta.io/"} >
+          <LinkTop href={"https://app.1delta.io/"} >
             Directly to App
-          </Link>
+          </LinkTop>
         </ButtonToAppLarge>
 
       </TopBar>
 
       <BottomBar>
         <ButtonWhite style={{ width: '200px', height: '50px' }} >
-          <Link href={"/home"}>
+          <LinkBottom href={"/home"}>
             Learn More
-          </Link>
+          </LinkBottom>
         </ButtonWhite>
 
       </BottomBar>
