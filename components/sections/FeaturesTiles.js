@@ -45,7 +45,7 @@ const FeaturesTiles = ({
 
   const sectionHeader = {
     title: 'Unified trading experience',
-    paragraph: 'No more switching between multiple web apps to manage your leveraged positions. 1Delta was built by traders with the goal of creating the best possible decentralized trading experience.'
+    paragraph: 'No more switching between multiple web apps to manage your leveraged positions. 1delta was built by traders with the goal of creating the best possible decentralized trading experience.'
   };
 
   return (
@@ -156,7 +156,7 @@ const FeaturesTiles = ({
                     No Centralization
                   </h4>
                   <p className="m-0 text-sm">
-                    History has shown that centralized brokers can't be trusted - 1Delta is the first decentralized broker that doesn't depend on its own liquidity.
+                    History has shown that centralized brokers can't be trusted - 1delta is the first decentralized broker that doesn't depend on its own liquidity.
                   </p>
                 </div>
               </div>
@@ -178,7 +178,7 @@ const FeaturesTiles = ({
                     Easy to use
                   </h4>
                   <p className="m-0 text-sm">
-                    If you've used Uniswap or Compound then you'll feel right at home. 1Delta provides traders a familiar experience with minimal onboarding.
+                    If you've used Uniswap or Compound then you'll feel right at home. 1delta provides traders a familiar experience with minimal onboarding.
                   </p>
                 </div>
               </div>

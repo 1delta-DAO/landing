@@ -47,7 +47,7 @@ const Footer = ({
           <div className="footer-bottom space-between text-xxs invert-order-desktop">
             <FooterNav className={'text-color-bright-avg-hover'} />
             <div className="footer-copyright text-color-bright">
-              <Link style={{color:'#C41969', fontWeight:'bold'}} href="https://1delta.io">1Delta DAO</Link>
+              <Link style={{color:'#C41969', fontWeight:'bold'}} href="https://1delta.io">1delta</Link>
               <br/>
               All right reserved</div>
           </div>

@@ -1,4 +1,4 @@
-# 1Delta DAO landing page
+# 1delta landing page
 
 Deployed [here](https://1delta.io).
 

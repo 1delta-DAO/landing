@@ -59,12 +59,12 @@ export const HeaderMiddleBlock = () => {
       <Row type='flex' justify='center' align='middle'>
         <S.ContentWrapper>
           <Col lg={24} md={24} sm={24} xs={24}>
-            <Title>The <PrimaryLight style={{ fontWeight: 'bold' }}>1Delta</PrimaryLight> Protocol</Title>
+            <Title>The <PrimaryLight style={{ fontWeight: 'bold' }}>1delta</PrimaryLight> Protocol</Title>
             <S.ContentDiv>
 
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', fontSize }}>
                 <TxtBlock>
-                  1Delta is a {' '}
+                  1delta is a {' '}
                   <PrimaryLight style={{ fontWeight: 'bold', marginLeft: '5px', fontSize }}>
                     decentralized crypto margin broker
                   </PrimaryLight>
@@ -213,7 +213,7 @@ export const MiddleBlockWithTiles = ({ title, content }) => {
                   No Centralization
                 </TileHeader>
                 <p className="m-0 text-sm">
-                  History has shown that centralized brokers can't be trusted - 1Delta is the first decentralized broker that doesn't depend on its own liquidity.
+                  History has shown that centralized brokers can't be trusted - 1delta is the first decentralized broker that doesn't depend on its own liquidity.
                 </p>
               </div>
             </TileContent>
@@ -233,7 +233,7 @@ export const MiddleBlockWithTiles = ({ title, content }) => {
                   Easy to use
                 </TileHeader>
                 <p className="m-0 text-sm">
-                  If you've used Uniswap or Compound then you'll feel right at home. 1Delta provides traders a familiar experience with minimal onboarding.
+                  If you've used Uniswap or Compound then you'll feel right at home. 1delta provides traders a familiar experience with minimal onboarding.
                 </p>
               </div>
             </TileContent>

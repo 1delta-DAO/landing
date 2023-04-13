@@ -56,9 +56,8 @@ const Footer = ({ t }) => {
             <FlexFloatContainer>
               <FlexFloat>
                 <Logo />
-                {/* <S.Language>1Delta DAO</S.Language> */}
                 <S.Para>
-                  ® 2023 1Delta DAO
+                  ® 2023 1delta
                   <br />
                   All Rights Reserved
                 </S.Para>

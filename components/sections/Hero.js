@@ -61,7 +61,7 @@ const Hero = ({
         <div className={innerClasses}>
           <div className="hero-content">
             <div className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              The <span className="text-color-primary-light">1Delta</span> Protocol
+              The <span className="text-color-primary-light">1delta</span> Protocol
             </div>
             <div className="container-xs" >
               <div className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">

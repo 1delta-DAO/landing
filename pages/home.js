@@ -22,7 +22,7 @@ const Home = () => {
 
       <MiddleBlockWithTiles
         title='Unified trading experience'
-        content='No more switching between multiple web apps to manage your leveraged positions. 1Delta was built by traders with the goal of creating the best possible decentralized trading experience.'
+        content='No more switching between multiple web apps to manage your leveraged positions. 1delta was built by traders with the goal of creating the best possible decentralized trading experience.'
 
       />
 

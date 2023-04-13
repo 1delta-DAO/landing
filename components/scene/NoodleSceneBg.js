@@ -11,7 +11,6 @@ export default function NoodleSceneBg() {
             <Bg />
             <Suspense fallback={null}>
                 <Noodles />
-                {/* <Caption >{`1Delta DAO`}</Caption> */}
                 <Rig />
             </Suspense>
         </Canvas>
