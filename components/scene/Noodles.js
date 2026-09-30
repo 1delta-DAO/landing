@@ -8,6 +8,9 @@ import { useThree } from '@react-three/fiber'
 import { useGLTF, Float } from '@react-three/drei'
 import { LayerMaterial, Depth, Fresnel, Noise } from 'lamina/vanilla'
 
+// Serve the Draco decoder locally so the compressed model works without a CDN.
+useGLTF.setDecoderPath('/draco/')
+
 const colorA = new THREE.Color('white').convertSRGBToLinear()
 const colorB = new THREE.Color('black').convertSRGBToLinear()
 const fresnel = new THREE.Color('white').convertSRGBToLinear()
@@ -46,4 +49,4 @@ export default function Noodles() {
   return Array.from({ length: 25 }, (_, i) => <Noodle key={i} />)
 }
 
-useGLTF.preload('/worm-transformed.glb')
+useGLTF.preload('/worms-transformed.glb')

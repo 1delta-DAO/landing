@@ -81,7 +81,7 @@ export default function BoxScene() {
                         <pointLight position={[2, -2, 10]} intensity={6} color={'white'} />
                         <Box position={[0, 0, -1]} />
                         <Box2 position={[0, 0, 0]} />
-                        <Environment preset="city" />
+                        <Environment files="/potsdamer_platz_1k.hdr" />
                     </Canvas>
                 </BoxContainer>
             ) : null
